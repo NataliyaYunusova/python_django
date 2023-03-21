@@ -46,18 +46,20 @@ class ThrottlingMiddleware:
     def __call__(self, request: HttpRequest):
         user_ip = request.META.get('REMOTE_ADDR')
         if not self.request_time:
-            print('Словарь запросов ещё пуст')
+            self.request_time[user_ip] = datetime.now()
 
         else:
-            if self.request_time['user_ip'] == user_ip and \
-                    (datetime.now() - self.request_time['time']).seconds < 5:
+            if user_ip in self.request_time.keys():
+                time_delta = (datetime.now() - self.request_time[user_ip]).seconds
+
+                if time_delta < 5:
+                    return render(request, 'requestdataapp/request-error.html')
+
+            self.request_time[user_ip] = datetime.now()
             # TODO вместо ключа 'user_ip' надо использовать переменную user_ip, иначе получается что хранится адрес
             #  только последнего пользователя и если будет 1000 запросов в минуту от двух пользователей которые делают
             #  запросы почереди, то данный алгоритм не ограничит их. В словаре надо хранить время последнего посещения
             #  конкртеного пользователя
-                return render(request, 'requestdataapp/request-error.html')
-
-        self.request_time = {'time': datetime.now(), 'user_ip': user_ip}
 
         response = self.get_response(request)
         return response
