@@ -46,13 +46,14 @@ class ThrottlingMiddleware:
     def __call__(self, request: HttpRequest):
         user_ip = request.META.get('REMOTE_ADDR')
         if not self.request_time:
+
             self.request_time[user_ip] = datetime.now()
 
         else:
             if user_ip in self.request_time.keys():
                 time_delta = (datetime.now() - self.request_time[user_ip]).seconds
 
-                if time_delta < 5:
+                if time_delta < 1:
                     return render(request, 'requestdataapp/request-error.html')
 
             self.request_time[user_ip] = datetime.now()

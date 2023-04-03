@@ -28,7 +28,6 @@ def handle_file_upload(request: HttpRequest) -> HttpResponse:
     if request.method == 'POST':
         form = UploadFileForm(request.POST, request.FILES)
         if form.is_valid():
-            # myfile = request.FILES['myfile']
             myfile = form.cleaned_data["file"]
             if myfile.size > 104857:
                 print('Размер файла должен быть не более 1Мб')
