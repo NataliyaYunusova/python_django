@@ -11,7 +11,7 @@ from .views import (
     ProductDeleteView,
     OrderCreateView,
     OrderUpdateView,
-    OrderDeleteView
+    OrderDeleteView,
 )
 
 app_name = 'shopapp'

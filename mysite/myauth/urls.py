@@ -6,23 +6,22 @@ from .views import (
     get_session_view,
     set_session_view,
     logout_view,
-    MyLogoutView,
+    MyLogoutView
 )
 
-app_name = "myauth"
+app_name = 'myauth'
 
 urlpatterns = [
-    # path("login/", login_view, name="login"),
     path(
-        "login/",
+        'login/',
         LoginView.as_view(
             template_name="myauth/login.html",
             redirect_authenticated_user=True,
         ),
         name="login",
     ),
-    # path("logout/", logout_view, name="logout"),
     path("logout/", MyLogoutView.as_view(), name="logout"),
+
     path("cookie/get/", get_cookie_view, name="cookie-get"),
     path("cookie/set/", set_cookie_view, name="cookie-set"),
 

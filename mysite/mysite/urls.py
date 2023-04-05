@@ -14,4 +14,4 @@ urlpatterns = [
     path('myauth/', include('myauth.urls')),
     path('shop/', include('shopapp.urls')),
     path('req/', include('requestdataapp.urls')),
-]
+   ]
