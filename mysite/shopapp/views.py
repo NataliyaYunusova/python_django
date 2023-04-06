@@ -84,40 +84,6 @@ class ProductDeleteView(DeleteView):
         return HttpResponseRedirect(success_url)
 
 
-# def create_product(request: HttpRequest) -> HttpResponse:
-#     if request.method == 'POST':
-#         form = ProductForm(request.POST)
-#         if form.is_valid():
-#             # name = form.cleaned_data["name"]
-#             # Product.objects.create(**form.cleaned_data)
-#             form.save()
-#             url = reverse("shopapp:products_list")
-#             return redirect(url)
-#     else:
-#         form = ProductForm()
-#     context = {
-#         "form": form,
-#     }
-#
-#     return render(request, 'shopapp/create-product.html', context=context)
-
-
-# def create_order(request: HttpRequest) -> HttpResponse:
-#     if request.method == 'POST':
-#         form = OrderForm(request.POST)
-#         if form.is_valid():
-#             form.save()
-#             url = reverse("shopapp:orders_list")
-#             return redirect(url)
-#     else:
-#         form = OrderForm()
-#     context = {
-#         "form": form,
-#     }
-#
-#     return render(request, 'shopapp/create-order.html', context=context)
-
-
 class OrderListView(ListView):
     queryset = (
         Order.objects
@@ -155,9 +121,3 @@ class OrderUpdateView(UpdateView):
 class OrderDeleteView(DeleteView):
     model = Order
     success_url = reverse_lazy("shopapp:orders_list")
-    #
-    # def form_valid(self, form):
-    #     success_url = self.get_success_url()
-    #     self.object.archived = True
-    #     self.object.save()
-    #     return HttpResponseRedirect(success_url)
