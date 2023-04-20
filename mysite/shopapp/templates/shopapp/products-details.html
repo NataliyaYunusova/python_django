@@ -22,19 +22,24 @@
             Archived: {{ product.archived }}
         </div>
     </div>
-    <div>
-        <a href="{% url 'shopapp:product_update' pk=product.pk %}">
-            Update product
-        </a>
-    </div>
+
+    {% if perms.shopapp.change_product %}
+        <div>
+            <a href="{% url 'shopapp:product_update' pk=product.pk %}">
+                Update product
+            </a>
+        </div>
+    {% endif %}
     <div>
         <a href="{% url 'shopapp:product_delete' pk=product.pk %}">
             Archive product
         </a>
     </div>
+
     <div>
         <a href="{% url 'shopapp:products_list' %}">
             Back to products list
         </a>
     </div>
+
 {% endblock %}
