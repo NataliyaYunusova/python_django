@@ -58,6 +58,8 @@ class ProductsListView(ListView):
 
 class ProductCreateView(UserPassesTestMixin, CreateView):
     permission_required = "shopapp.add_product"
+    # TODO строго говоря, по заданию, требуется только проверить наличие permission, поэтому достаточно использовать
+    #  миксин PermissionRequiredMixin
     model = Product
     fields = "name", "price", "description", "discount"
     success_url = reverse_lazy("shopapp:products_list")
@@ -82,6 +84,7 @@ class ProductUpdateView(UserPassesTestMixin, UpdateView):
         return self.request.user.is_superuser or \
             self.get_object().created_by == self.request.user or \
             self.request.user.has_perm(self.permission_required)
+            # TODO вместо второго or должен быть оператор and
 
     def get_success_url(self):
         return reverse(
