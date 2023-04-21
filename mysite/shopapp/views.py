@@ -6,6 +6,7 @@ from django.shortcuts import render, redirect, reverse
 from django.urls import reverse_lazy
 from django.views import View
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
+from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin, UserPassesTestMixin
 
 from .forms import GroupForm
 from .forms import ProductForm, OrderForm
@@ -55,16 +56,35 @@ class ProductsListView(ListView):
     queryset = Product.objects.filter(archived=False)
 
 
-class ProductCreateView(CreateView):
+class ProductCreateView(UserPassesTestMixin, CreateView):
+    permission_required = "shopapp.add_product"
+    # TODO строго говоря, по заданию, требуется только проверить наличие permission, поэтому достаточно использовать
+    #  миксин PermissionRequiredMixin
     model = Product
     fields = "name", "price", "description", "discount"
     success_url = reverse_lazy("shopapp:products_list")
 
+    def test_func(self):
+    # return self.request.user.groups.filter(name="secret-group").exists()
+        return self.request.user.is_superuser or self.request.user.has_perm(self.permission_required)
 
-class ProductUpdateView(UpdateView):
+    def form_valid(self, form):
+        form.instance.created_by = self.request.user
+        return super().form_valid(form)
+
+
+class ProductUpdateView(UserPassesTestMixin, UpdateView):
+
     model = Product
     fields = "name", "price", "description", "discount"
     template_name_suffix = "_update_form"
+    permission_required = "shopapp.change_product"
+
+    def test_func(self):
+        return self.request.user.is_superuser or \
+            self.get_object().created_by == self.request.user or \
+            self.request.user.has_perm(self.permission_required)
+            # TODO вместо второго or должен быть оператор and
 
     def get_success_url(self):
         return reverse(
@@ -84,7 +104,7 @@ class ProductDeleteView(DeleteView):
         return HttpResponseRedirect(success_url)
 
 
-class OrderListView(ListView):
+class OrderListView(LoginRequiredMixin, ListView):
     queryset = (
         Order.objects
         .select_related("user")
@@ -92,7 +112,8 @@ class OrderListView(ListView):
     )
 
 
-class OrderDetailView(DetailView):
+class OrderDetailView(PermissionRequiredMixin, DetailView):
+    permission_required = "shopapp.view_order"
     queryset = (
         Order.objects
         .select_related("user")
