@@ -1,7 +1,7 @@
 from timeit import default_timer
 
 from django.contrib.auth.models import Group
-from django.http import HttpRequest, HttpResponse, HttpResponseRedirect
+from django.http import HttpRequest, HttpResponse, HttpResponseRedirect, JsonResponse
 from django.shortcuts import render, redirect, reverse
 from django.urls import reverse_lazy
 from django.views import View
@@ -56,10 +56,8 @@ class ProductsListView(ListView):
     queryset = Product.objects.filter(archived=False)
 
 
-class ProductCreateView(UserPassesTestMixin, CreateView):
+class ProductCreateView(PermissionRequiredMixin, CreateView):
     permission_required = "shopapp.add_product"
-    # TODO строго говоря, по заданию, требуется только проверить наличие permission, поэтому достаточно использовать
-    #  миксин PermissionRequiredMixin
     model = Product
     fields = "name", "price", "description", "discount"
     success_url = reverse_lazy("shopapp:products_list")
@@ -82,9 +80,8 @@ class ProductUpdateView(UserPassesTestMixin, UpdateView):
 
     def test_func(self):
         return self.request.user.is_superuser or \
-            self.get_object().created_by == self.request.user or \
+            self.get_object().created_by == self.request.user and \
             self.request.user.has_perm(self.permission_required)
-            # TODO вместо второго or должен быть оператор and
 
     def get_success_url(self):
         return reverse(
@@ -102,6 +99,21 @@ class ProductDeleteView(DeleteView):
         self.object.archived = True
         self.object.save()
         return HttpResponseRedirect(success_url)
+
+
+class ProductDataExportView(View):
+    def get(self, request: HttpRequest) -> JsonResponse:
+        products = Product.objects.order_by("pk").all()
+        products_data = [
+            {
+                "pk": product.pk,
+                "name": product.name,
+                "price": product.price,
+                "archived": product.archived,
+            }
+            for product in products
+        ]
+        return JsonResponse({"products": products_data})
 
 
 class OrderListView(LoginRequiredMixin, ListView):

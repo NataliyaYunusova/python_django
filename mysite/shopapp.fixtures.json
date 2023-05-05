@@ -1,0 +1,148 @@
+[
+  {
+    "model": "shopapp.product",
+    "pk": 1,
+    "fields": {
+      "name": "Laptop",
+      "description": "A laptop computer or notebook computer, also known as a laptop or notebook for short, is a small, portable personal computer (PC).",
+      "price": "1999.00",
+      "discount": 0,
+      "created_at": "2023-04-28T14:08:45.719Z",
+      "created_by": null,
+      "archived": true
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 2,
+    "fields": {
+      "name": "Desktop(new)",
+      "description": "Desktop computer, a personal computer designed to fit on a desk",
+      "price": "2399.00",
+      "discount": 15,
+      "created_at": "2023-04-28T14:09:59.918Z",
+      "created_by": null,
+      "archived": false
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 3,
+    "fields": {
+      "name": "Smartphone",
+      "description": "A smartphone is a portable computer.",
+      "price": "987.00",
+      "discount": 25,
+      "created_at": "2023-04-28T14:11:14.965Z",
+      "created_by": null,
+      "archived": false
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 4,
+    "fields": {
+      "name": "Tablet",
+      "description": "great tablet",
+      "price": "1234.00",
+      "discount": 0,
+      "created_at": "2023-04-30T08:35:21.160Z",
+      "created_by": 1,
+      "archived": false
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 5,
+    "fields": {
+      "name": "Phone2",
+      "description": "phone 2 is better than phone 1\r\nthis is a great phone",
+      "price": "1235.00",
+      "discount": 0,
+      "created_at": "2023-04-30T08:38:19.845Z",
+      "created_by": 1,
+      "archived": true
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 6,
+    "fields": {
+      "name": "Phone3",
+      "description": "phone 3",
+      "price": "999.42",
+      "discount": 12,
+      "created_at": "2023-04-30T08:40:56.772Z",
+      "created_by": 1,
+      "archived": false
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 7,
+    "fields": {
+      "name": "Tablet 2",
+      "description": "a new tablet",
+      "price": "1500.00",
+      "discount": 15,
+      "created_at": "2023-05-02T07:32:46.840Z",
+      "created_by": 1,
+      "archived": false
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 8,
+    "fields": {
+      "name": "Cupboard",
+      "description": "A cupboard is a piece of furniture for enclosing dishware or grocery items that are stored in a home.",
+      "price": "3999.00",
+      "discount": 5,
+      "created_at": "2023-05-02T08:24:51.596Z",
+      "created_by": 2,
+      "archived": false
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 9,
+    "fields": {
+      "name": "Chair",
+      "description": "A chair is a type of seat, typically designed for one person and consisting of one or more legs, a flat or slightly angled seat and a back-rest.",
+      "price": "1999.00",
+      "discount": 10,
+      "created_at": "2023-05-02T14:10:20.341Z",
+      "created_by": 2,
+      "archived": false
+    }
+  },
+  {
+    "model": "shopapp.order",
+    "pk": 1,
+    "fields": {
+      "delivery_address": "ul Pupkina, d 8",
+      "promocode": "SALE123",
+      "created_at": "2023-04-28T17:28:04.752Z",
+      "user": 1,
+      "products": [
+        2,
+        1,
+        3
+      ]
+    }
+  },
+  {
+    "model": "shopapp.order",
+    "pk": 2,
+    "fields": {
+      "delivery_address": "ul. Repina 32",
+      "promocode": "123Smile",
+      "created_at": "2023-05-02T09:37:37.449Z",
+      "user": 2,
+      "products": [
+        8,
+        3
+      ]
+    }
+  }
+]

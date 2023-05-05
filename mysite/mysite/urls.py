@@ -13,5 +13,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('myauth.urls')),
     path('shop/', include('shopapp.urls')),
-    path('req/', include('requestdataapp.urls')),
+    # path('req/', include('requestdataapp.urls')),
    ]
