@@ -6,7 +6,7 @@ from django.contrib.auth.models import User, Permission
 from django.test import TestCase, Client
 from django.urls import reverse
 
-from shopapp.models import Product
+from shopapp.models import Product, Order
 from shopapp.utils import add_two_numbers
 
 
@@ -19,7 +19,9 @@ class AddTwoNumbersTestCase(TestCase):
 class ProductCreateViewTestCase(TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.user = User.objects.create_superuser(username="bob_test", password='qwerty')
+        # cls.user = User.objects.create_superuser(username="bob_test", password='qwerty')
+        cls.user = User.objects.create_user(username="bob_test", password='qwerty')
+        cls.user.user_permissions.add(Permission.objects.get(codename='add_product'))
 
     @classmethod
     def tearDownClass(cls):
@@ -90,6 +92,34 @@ class ProductsListViewTestCase(TestCase):
         self.assertTemplateUsed(response, 'shopapp/products-list.html')
 
 
+class ProductsExportViewTestCase(TestCase):
+    fixtures = [
+        'products-fixture.json',
+        'users-fixture.json',
+    ]
+
+    def test_get_products_view(self):
+        response = self.client.get(
+            reverse("shopapp:products-export"),
+        )
+        self.assertEqual(response.status_code, 200)
+        products = Product.objects.order_by("pk").all()
+        expected_data = [
+            {
+                "pk": product.pk,
+                "name": product.name,
+                "price": str(product.price),
+                "archived": product.archived,
+            }
+            for product in products
+        ]
+        products_data = response.json()
+        self.assertEqual(
+            products_data["products"],
+            expected_data,
+        )
+
+
 class OrderListViewTestCase(TestCase):
     @classmethod
     def setUpClass(cls):
@@ -117,29 +147,40 @@ class OrderListViewTestCase(TestCase):
         self.assertIn(str(settings.LOGIN_URL), response.url)
 
 
-class ProductsExportViewTestCase(TestCase):
-    fixtures = [
-        'products-fixture.json',
-        'users-fixture.json',
-    ]
+class OrderDetailViewTestCase(TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.user = User.objects.create_user(username="Max", password='qwerty')
+        cls.user.user_permissions.add(Permission.objects.get(codename='view_order'))
 
-    def test_get_products_view(self):
+    @classmethod
+    def tearDownClass(cls) -> None:
+        cls.user.delete()
+        # cls.order.delete()
+
+    def setUp(self) -> None:
+        self.client.force_login(self.user)
+        self.order = Order.objects.create(
+            delivery_address='ul. Pyshkina, d 13',
+            promocode='123code',
+            user_id=self.user.id,
+        )
+
+    def tearDown(self) -> None:
+        self.order.delete()
+
+    def test_order_details(self):
         response = self.client.get(
-            reverse("shopapp:products-export"),
+            reverse("shopapp:order_details", kwargs={"pk": self.order.pk})
         )
+        response_order = response.context['order']
         self.assertEqual(response.status_code, 200)
-        products = Product.objects.order_by("pk").all()
-        expected_data = [
-            {
-                "pk": product.pk,
-                "name": product.name,
-                "price": str(product.price),
-                "archived": product.archived,
-            }
-            for product in products
-        ]
-        products_data = response.json()
-        self.assertEqual(
-            products_data["products"],
-            expected_data,
+        self.assertTrue(
+            Order.objects.filter(delivery_address=self.order.delivery_address).exists()
         )
+        self.assertTrue(
+            Order.objects.filter(promocode=self.order.promocode).exists()
+        )
+        self.assertEqual(response_order.pk, self.order.pk)
+
+
