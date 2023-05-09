@@ -184,3 +184,43 @@ class OrderDetailViewTestCase(TestCase):
         self.assertEqual(response_order.pk, self.order.pk)
 
 
+class OrderExportTestCase(TestCase):
+    fixtures = [
+        "orders-fixture.json",
+        "products-fixture.json",
+        "users-fixture.json",
+    ]
+
+    @classmethod
+    def setUpClass(cls) -> None:
+        cls.user = User.objects.create_user(username='Max', password='qwerty', is_staff=True)
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.user.delete()
+
+    def setUp(self) -> None:
+        self.client.force_login(self.user)
+
+    def test_get_orders_view(self):
+        response = self.client.get(
+            reverse("shopapp:orders-export"),
+        )
+        self.assertEqual(response.status_code, 200)
+
+        orders = Order.objects.order_by("pk").all()
+        expected_data = [
+            {
+                "order_id": order.pk,
+                "delivery_address": order.delivery_address,
+                "promocode": order.promocode,
+                "user_id": order.user.pk,
+                "products": [product.pk for product in order.products.all()],
+            }
+            for order in orders
+        ]
+        orders_data = response.json()
+        self.assertEqual(
+            orders_data["orders"],
+            expected_data,
+        )
