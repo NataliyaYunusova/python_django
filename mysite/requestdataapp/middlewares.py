@@ -5,13 +5,13 @@ from django.shortcuts import render
 
 
 def setup_useragent_on_request_middleware(get_response):
-    print('initial call')
+    # print('initial call')
 
     def middleware(request: HttpRequest):
-        print('before get response')
+        # print('before get response')
         request.user_agent = request.META['HTTP_USER_AGENT']
         response = get_response(request)
-        print('after get response')
+        # print('after get response')
 
         return response
 
@@ -27,15 +27,15 @@ class CountRequestMiddleware:
 
     def __call__(self, request: HttpRequest):
         self.requests_count += 1
-        print('requests count', self.requests_count)
+        # print('requests count', self.requests_count)
         response = self.get_response(request)
         self.responses_count += 1
-        print('responses count', self.responses_count)
+        # print('responses count', self.responses_count)
         return response
 
     def process_exception(self, request: HttpRequest, exception: Exception):
         self.exceptions_count += 1
-        print('got', self.exceptions_count, 'exceptions so far')
+        # print('got', self.exceptions_count, 'exceptions so far')
 
 
 class ThrottlingMiddleware:
@@ -55,8 +55,8 @@ class ThrottlingMiddleware:
 
                 if time_delta < 1:
                     return render(request, 'requestdataapp/request-error.html')
-
-            self.request_time[user_ip] = datetime.now()
-
-        response = self.get_response(request)
-        return response
+#
+#             self.request_time[user_ip] = datetime.now()
+#
+#         response = self.get_response(request)
+#         return response
