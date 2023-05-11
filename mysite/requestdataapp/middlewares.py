@@ -9,7 +9,8 @@ def setup_useragent_on_request_middleware(get_response):
 
     def middleware(request: HttpRequest):
         # print('before get response')
-        request.user_agent = request.META['HTTP_USER_AGENT']
+        # request.user_agent = request.META['HTTP_USER_AGENT']
+        request.user_agent = request.META.get('HTTP_USER_AGENT', 'test/client')
         response = get_response(request)
         # print('after get response')
 

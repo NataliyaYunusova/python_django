@@ -3,7 +3,7 @@ from django.db.models import QuerySet
 from django.http import HttpRequest
 from .admin_mixins import ExportAsCSVMixin
 
-from .models import Product, Order
+from .models import Product, Order, ProductImage
 
 
 class OrderInline(admin.TabularInline):
@@ -20,6 +20,10 @@ def merk_unarchived(modeladmin: admin.ModelAdmin, request: HttpRequest, queryset
     queryset.update(archived=False)
 
 
+class ProductInline(admin.StackedInline):
+    model = ProductImage
+
+
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin, ExportAsCSVMixin):
     actions = [
@@ -29,6 +33,7 @@ class ProductAdmin(admin.ModelAdmin, ExportAsCSVMixin):
     ]
     inlines = [
         OrderInline,
+        ProductInline,
     ]
     # list_display = "pk", "name", "description", "price", "discount"
     list_display = "pk", "name", "description_short", "price", "discount", "archived"
@@ -42,6 +47,9 @@ class ProductAdmin(admin.ModelAdmin, ExportAsCSVMixin):
         ('Price options', {
             'fields': ('price', 'discount'),
             'classes': ('wide', 'collapse'),
+        }),
+        ('Images', {
+            'fields': ('preview', ),
         }),
         ('Extra options', {
             'fields': ('archived',),
