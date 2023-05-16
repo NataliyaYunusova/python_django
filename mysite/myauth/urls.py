@@ -1,5 +1,7 @@
 from django.contrib.auth.views import LoginView
 from django.urls import path
+from django.conf import settings
+from django.conf.urls.static import static
 from .views import (
     get_cookie_view,
     set_cookie_view,
@@ -10,6 +12,8 @@ from .views import (
     AboutMeView,
     RegisterView,
     FooBarView,
+    change_profile,
+    change_photo,
 )
 
 app_name = 'myauth'
@@ -35,4 +39,15 @@ urlpatterns = [
 
     path("foo-bar/", FooBarView.as_view(), name="foo-bar"),
 
+    path("change-profile/", change_profile, name='change-profile'),
+    path("change-photo/", change_photo, name='change-photo'),
+
 ]
+
+if settings.DEBUG:
+    urlpatterns.extend(
+        static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    )
+    urlpatterns.extend(
+        static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    )

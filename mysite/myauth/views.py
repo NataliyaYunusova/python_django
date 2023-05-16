@@ -1,3 +1,4 @@
+from django.views.generic import CreateView, TemplateView, UpdateView, DetailView
 from django.contrib.auth.decorators import login_required, permission_required, user_passes_test
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.views import LogoutView
@@ -6,13 +7,14 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.urls import reverse, reverse_lazy
 from django.views import View
-from django.views.generic import TemplateView, CreateView
 
 from .models import Profile
+from .forms import ProfileForm, UserForm, ProfileAvatarForm
 
 
 class AboutMeView(TemplateView):
     template_name = "myauth/about-me.html"
+    model = Profile
 
 
 class RegisterView(CreateView):
@@ -88,3 +90,35 @@ def get_session_view(request: HttpRequest) -> HttpResponse:
 class FooBarView(View):
     def get(self, request: HttpRequest) -> JsonResponse:
         return JsonResponse({"foo": "bar", "spam": "eggs"})
+
+
+@login_required
+def change_profile(request):
+    if request.method == 'POST':
+        user_form = UserForm(data=request.POST, instance=request.user)
+        profile_form = ProfileForm(data=request.POST, instance=request.user.profile, files=request.FILES)
+        if user_form.is_valid() and profile_form.is_valid():
+            user_form.save()
+            profile_form.save()
+        return redirect('myauth:about-me')
+    else:
+        user_form = UserForm(instance=request.user)
+        profile_form = ProfileForm(instance=request.user.profile)
+    return render(request, 'myauth/change-profile.html', {
+        'user_form': user_form,
+        'profile_form': profile_form
+    })
+
+
+@login_required
+def change_photo(request):
+    if request.method == 'POST':
+        profile_avatar_form = ProfileAvatarForm(data=request.POST, files=request.FILES, instance=request.user.profile)
+        if profile_avatar_form.is_valid():
+            profile_avatar_form.save()
+        return redirect('myauth:about-me')
+    else:
+        profile_avatar_form = ProfileAvatarForm(instance=request.user.profile)
+    return render(request, 'myauth/change-photo.html', {
+        'profile_avatar_form': profile_avatar_form
+    })

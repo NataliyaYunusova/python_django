@@ -9,9 +9,26 @@
         User info
     </h1>
     {% if user.is_authenticated %}
+
         <h2>
             Detail
         </h2>
+        <div>
+            Avatar:
+            {% if user.profile.avatar %}
+                <img src="{{ user.profile.avatar.url }}" alt="Avatar" height=100 width=100 >
+                {% if user_id == profile.user_id %}
+                    <div>
+                        <a href="{% url 'myauth:change-photo' %}">
+                            Change photo
+                        </a>
+                    </div>
+                {% endif %}
+
+            {% else %}
+                No photo yet
+            {% endif%}
+        </div>
         <p>
             Username: {{ user.username }}
         </p>
@@ -27,10 +44,18 @@
         <p>
             Bio: {{ user.profile.bio }}
         </p>
+        <p>
+            <a href="{% url 'myauth:change-profile' %}">
+                Edit profile
+            </a>
+        </p>
+
     {% else %}
         <h2>
             User anonymous
         </h2>
 
+
     {% endif %}
+
 {% endblock %}
