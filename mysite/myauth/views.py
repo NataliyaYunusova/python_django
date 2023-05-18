@@ -1,4 +1,6 @@
-from django.views.generic import CreateView, TemplateView, UpdateView, DetailView
+from django.contrib.auth.mixins import PermissionRequiredMixin
+from django.contrib.auth.models import User
+from django.views.generic import CreateView, TemplateView,ListView, DetailView
 from django.contrib.auth.decorators import login_required, permission_required, user_passes_test
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.views import LogoutView
@@ -122,3 +124,28 @@ def change_photo(request):
     return render(request, 'myauth/change-photo.html', {
         'profile_avatar_form': profile_avatar_form
     })
+
+
+class ProfilesListView(ListView):
+    template_name = "myauth/profiles_list.html"
+    context_object_name = "profiles"
+    queryset = Profile.objects.all()
+
+
+class ProfileDetailsView(DetailView):
+    model = Profile
+    template_name = "myauth/profile_details.html"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['form'] = ProfileForm(instance=self.object)
+        return context
+
+    def post(self, request, *args, **kwargs):
+        profile = self.get_object()
+        form = ProfileForm(request.POST, request.FILES, instance=profile)
+        if form.is_valid():
+            form.save()
+            return redirect("myauth/profile_details.html")
+        else:
+            return self.render_to_response(self.get_context_data(form=form))

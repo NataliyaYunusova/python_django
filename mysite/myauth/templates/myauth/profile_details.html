@@ -1,7 +1,7 @@
 {% extends 'myauth/base.html' %}
 
 {% block title %}
-    About me
+
 {% endblock %}
 
 {% block body %}
@@ -15,9 +15,9 @@
         </h2>
         <div>
             Avatar:
-            {% if user.profile.avatar %}
-                <img src="{{ user.profile.avatar.url }}" alt="Avatar" height=100 width=100">
-                {% if user_id == profile.user_id %}
+            {% if object.avatar %}
+                <img src="{{ profile.avatar.url }}" alt="Avatar" height=100 width=100">
+                    {% if object.is_staff or user_id == profile.user_id %}
                     <div>
                         <a href="{% url 'myauth:change-photo' %}">
                             Change photo
@@ -45,13 +45,8 @@
             Bio: {{ user.profile.bio }}
         </p>
         <p>
-            <a href="{% url 'myauth:change-profile' %}">
-                Edit profile
-            </a>
-        </p>
-        <p>
             <a href="{% url 'myauth:profiles_list' %}">
-                Profiles list
+                Back to profiles list
             </a>
         </p>
 
