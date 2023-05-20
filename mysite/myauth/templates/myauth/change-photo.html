@@ -21,7 +21,7 @@
         </form>
     </div>
     <p>
-        <a href="{% url 'myauth:about-me' %}">
+        <a href="{% url 'myauth:profile_details' pk=user.profile.pk %}">
             Back to profile
         </a>
     </p>

@@ -43,10 +43,10 @@ urlpatterns = [
     path("foo-bar/", FooBarView.as_view(), name="foo-bar"),
 
     path("change-profile/", change_profile, name='change-profile'),
-    path("change-photo/", change_photo, name='change-photo'),
+    path("change-photo", change_photo, name='change-photo'),
 
     path("profiles/", ProfilesListView.as_view(), name="profiles_list"),
-    path("profiles/<int:pk>", ProfileDetailsView.as_view(), name="profile_details"),
+    path("profiles/<int:pk>/", ProfileDetailsView.as_view(), name="profile_details"),
 
 ]
 

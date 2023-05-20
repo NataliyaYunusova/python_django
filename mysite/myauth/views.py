@@ -1,6 +1,6 @@
 from django.contrib.auth.mixins import PermissionRequiredMixin
 from django.contrib.auth.models import User
-from django.views.generic import CreateView, TemplateView,ListView, DetailView
+from django.views.generic import CreateView, TemplateView, ListView, DetailView, UpdateView
 from django.contrib.auth.decorators import login_required, permission_required, user_passes_test
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.views import LogoutView

@@ -8,7 +8,7 @@
     <h1>
         User info
     </h1>
-    {% if user.is_authenticated %}
+    {% if object.user.is_authenticated %}
 
         <h2>
             Detail
@@ -17,7 +17,7 @@
             Avatar:
             {% if object.avatar %}
                 <img src="{{ profile.avatar.url }}" alt="Avatar" height=100 width=100">
-                    {% if object.is_staff or user_id == profile.user_id %}
+                {% if object.user.is_staff or object.user.pk == object.profile.pk %}
                     <div>
                         <a href="{% url 'myauth:change-photo' %}">
                             Change photo
@@ -27,22 +27,29 @@
 
             {% else %}
                 No photo yet
+                {% if object.user.is_staff or object.user.pk == object.profile.pk %}
+                    <div>
+                        <a href="{% url 'myauth:change-photo' %}">
+                            Add photo
+                        </a>
+                    </div>
+                {% endif %}
             {% endif%}
         </div>
         <p>
-            Username: {{ user.username }}
+            Username: {{ object.user.username }}
         </p>
         <p>
-            First name: {{ user.first_name }}
+            First name: {{ object.user.first_name }}
         </p>
         <p>
-            Last name: {{ user.last_name }}
+            Last name: {{ object.user.last_name }}
         </p>
         <p>
-            Email: {{ user.email }}
+            Email: {{ object.user.email }}
         </p>
         <p>
-            Bio: {{ user.profile.bio }}
+            Bio: {{ object.user.profile.bio }}
         </p>
         <p>
             <a href="{% url 'myauth:profiles_list' %}">
