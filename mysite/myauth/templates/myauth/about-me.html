@@ -27,6 +27,13 @@
 
             {% else %}
                 No photo yet
+                {% if user_id == profile.user_id %}
+                    <div>
+                        <a href="{% url 'myauth:change-photo' %}">
+                            Add photo
+                        </a>
+                    </div>
+                {% endif %}
             {% endif%}
         </div>
         <p>
@@ -46,7 +53,7 @@
         </p>
         <p>
             <a href="{% url 'myauth:change-profile' %}">
-                Edit profile
+                Change profile
             </a>
         </p>
         <p>
