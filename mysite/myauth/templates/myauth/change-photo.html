@@ -1,0 +1,34 @@
+{% extends 'myauth/base.html' %}
+
+{% block title %}
+    Change photo
+{% endblock %}
+
+{% block body %}
+    <h1>
+        Change photo
+    </h1>
+    <div>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <p>
+                <button type="submit">
+                    Save changes
+                </button>
+            </p>
+
+        </form>
+    </div>
+    <p>
+        <a href="{% url 'myauth:profile_details' pk=object.pk %}">
+            Back to {{ object.user.username }} profile
+        </a>
+    </p>
+    <p>
+        <a href="{% url 'myauth:profiles_list' %}">
+            Back to profiles list
+        </a>
+    </p>
+
+{% endblock %}

@@ -193,9 +193,7 @@ class OrderExportTestCase(TestCase):
 
     @classmethod
     def setUpClass(cls) -> None:
-        # TODO вы переопределили метод setUpClass, но не вызвали код метода из класса предка (через super),
-        #  поэтому фикстуры сейчас не подгружаются. В документации есть об этом отдельное предупреждение:
-        #  https://docs.djangoproject.com/en/4.0/topics/testing/tools/#django.test.SimpleTestCase.databases
+        super().setUpClass()
         cls.user = User.objects.create_user(username='Max', password='qwerty', is_staff=True)
 
     @classmethod

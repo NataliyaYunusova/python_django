@@ -1,18 +1,22 @@
+from django.contrib.auth.mixins import PermissionRequiredMixin, LoginRequiredMixin
+from django.contrib.auth.models import User
+from django.views.generic import CreateView, TemplateView, ListView, DetailView, UpdateView
 from django.contrib.auth.decorators import login_required, permission_required, user_passes_test
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.views import LogoutView
 from django.http import HttpRequest, HttpResponse, JsonResponse
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth import authenticate, login, logout
 from django.urls import reverse, reverse_lazy
 from django.views import View
-from django.views.generic import TemplateView, CreateView
 
 from .models import Profile
+from .forms import ProfileForm, UserForm, ProfileAvatarForm
 
 
 class AboutMeView(TemplateView):
     template_name = "myauth/about-me.html"
+    model = Profile
 
 
 class RegisterView(CreateView):
@@ -88,3 +92,75 @@ def get_session_view(request: HttpRequest) -> HttpResponse:
 class FooBarView(View):
     def get(self, request: HttpRequest) -> JsonResponse:
         return JsonResponse({"foo": "bar", "spam": "eggs"})
+
+
+@login_required
+def change_profile(request):
+    if request.method == 'POST':
+        user_form = UserForm(data=request.POST, instance=request.user)
+        profile_form = ProfileForm(data=request.POST, instance=request.user.profile, files=request.FILES)
+        if user_form.is_valid() and profile_form.is_valid():
+            user_form.save()
+            profile_form.save()
+        return redirect('myauth:about-me')
+    else:
+        user_form = UserForm(instance=request.user)
+        profile_form = ProfileForm(instance=request.user.profile)
+    return render(request, 'myauth/change-profile.html', {
+        'user_form': user_form,
+        'profile_form': profile_form
+    })
+
+
+@login_required
+def change_photo(request):
+    if request.method == 'POST':
+        profile_avatar_form = ProfileAvatarForm(data=request.POST, files=request.FILES, instance=request.user.profile)
+        if profile_avatar_form.is_valid():
+            profile_avatar_form.save()
+        return redirect('myauth:about-me')
+    else:
+        profile_avatar_form = ProfileAvatarForm(instance=request.user.profile)
+    return render(request, 'myauth/change-photo-me.html', {
+        'profile_avatar_form': profile_avatar_form
+    })
+
+
+class PhotoUpdateView(LoginRequiredMixin, UpdateView):
+    model = Profile
+    form_class = ProfileAvatarForm
+    template_name = "myauth/change-photo.html"
+
+    def get_success_url(self):
+        return reverse_lazy('myauth:profile_details', kwargs={'pk': self.object.pk})
+
+    def get_object(self, queryset=None):
+        pk = self.kwargs.get("pk")
+        print('user_id = ', pk)
+        user_profile = get_object_or_404(Profile, pk=pk)
+        return user_profile
+
+
+class ProfilesListView(ListView):
+    template_name = "myauth/profiles_list.html"
+    context_object_name = "profiles"
+    queryset = Profile.objects.all()
+
+
+class ProfileDetailsView(DetailView):
+    model = Profile
+    template_name = "myauth/profile_details.html"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['form'] = ProfileForm(instance=self.object)
+        return context
+
+    def post(self, request, *args, **kwargs):
+        profile = self.get_object()
+        form = ProfileForm(request.POST, request.FILES, instance=profile)
+        if form.is_valid():
+            form.save()
+            return redirect("myauth/profile_details.html")
+        else:
+            return self.render_to_response(self.get_context_data(form=form))

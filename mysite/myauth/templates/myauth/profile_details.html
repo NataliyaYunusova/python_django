@@ -1,25 +1,25 @@
 {% extends 'myauth/base.html' %}
 
 {% block title %}
-    About me
+
 {% endblock %}
 
 {% block body %}
     <h1>
         User info
     </h1>
-    {% if user.is_authenticated %}
+    {% if object.user.is_authenticated %}
 
         <h2>
             Detail
         </h2>
         <div>
             Avatar:
-            {% if user.profile.avatar %}
-                <img src="{{ user.profile.avatar.url }}" alt="Avatar" height=100 width=100">
-                {% if user.is_staff or user.id == user.profile.user_id %}
+            {% if object.avatar %}
+                <img src="{{ profile.avatar.url }}" alt="Avatar" height=100 width=100">
+                {% if user.is_staff or user.pk == object.user.pk %}
                     <div>
-                        <a href="{% url 'myauth:change-photo-me' %}">
+                        <a href="{% url 'myauth:change-photo' pk=object.pk %}">
                             Change photo
                         </a>
                     </div>
@@ -27,9 +27,9 @@
 
             {% else %}
                 No photo yet
-                {% if user.is_staff or user.id == user.profile.user_id %}
+                {% if user.is_staff or user.pk == object.user.pk %}
                     <div>
-                        <a href="{% url 'myauth:change-photo-me' %}">
+                        <a href="{% url 'myauth:change-photo' pk=object.pk %}">
                             Add photo
                         </a>
                     </div>
@@ -37,28 +37,23 @@
             {% endif%}
         </div>
         <p>
-            Username: {{ user.username }}
+            Username: {{ object.user.username }}
         </p>
         <p>
-            First name: {{ user.first_name }}
+            First name: {{ object.user.first_name }}
         </p>
         <p>
-            Last name: {{ user.last_name }}
+            Last name: {{ object.user.last_name }}
         </p>
         <p>
-            Email: {{ user.email }}
+            Email: {{ object.user.email }}
         </p>
         <p>
-            Bio: {{ user.profile.bio }}
-        </p>
-        <p>
-            <a href="{% url 'myauth:change-profile' %}">
-                Change profile
-            </a>
+            Bio: {{ object.user.profile.bio }}
         </p>
         <p>
             <a href="{% url 'myauth:profiles_list' %}">
-                Profiles list
+                Back to profiles list
             </a>
         </p>
 
