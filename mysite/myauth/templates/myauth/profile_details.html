@@ -17,9 +17,9 @@
             Avatar:
             {% if object.avatar %}
                 <img src="{{ profile.avatar.url }}" alt="Avatar" height=100 width=100">
-                {% if object.user.is_staff or object.user.pk == object.profile.pk %}
+                {% if user.is_staff or user.pk == object.user.pk %}
                     <div>
-                        <a href="{% url 'myauth:change-photo' %}">
+                        <a href="{% url 'myauth:change-photo' pk=object.pk %}">
                             Change photo
                         </a>
                     </div>
@@ -27,9 +27,9 @@
 
             {% else %}
                 No photo yet
-                {% if object.user.is_staff or object.user.pk == object.profile.pk %}
+                {% if user.is_staff or user.pk == object.user.pk %}
                     <div>
-                        <a href="{% url 'myauth:change-photo' %}">
+                        <a href="{% url 'myauth:change-photo' pk=object.pk %}">
                             Add photo
                         </a>
                     </div>

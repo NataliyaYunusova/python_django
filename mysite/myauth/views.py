@@ -1,11 +1,11 @@
-from django.contrib.auth.mixins import PermissionRequiredMixin
+from django.contrib.auth.mixins import PermissionRequiredMixin, LoginRequiredMixin
 from django.contrib.auth.models import User
 from django.views.generic import CreateView, TemplateView, ListView, DetailView, UpdateView
 from django.contrib.auth.decorators import login_required, permission_required, user_passes_test
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.views import LogoutView
 from django.http import HttpRequest, HttpResponse, JsonResponse
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth import authenticate, login, logout
 from django.urls import reverse, reverse_lazy
 from django.views import View
@@ -121,9 +121,24 @@ def change_photo(request):
         return redirect('myauth:about-me')
     else:
         profile_avatar_form = ProfileAvatarForm(instance=request.user.profile)
-    return render(request, 'myauth/change-photo.html', {
+    return render(request, 'myauth/change-photo-me.html', {
         'profile_avatar_form': profile_avatar_form
     })
+
+
+class PhotoUpdateView(LoginRequiredMixin, UpdateView):
+    model = Profile
+    form_class = ProfileAvatarForm
+    template_name = "myauth/change-photo.html"
+
+    def get_success_url(self):
+        return reverse_lazy('myauth:profile_details', kwargs={'pk': self.object.pk})
+
+    def get_object(self, queryset=None):
+        pk = self.kwargs.get("pk")
+        print('user_id = ', pk)
+        user_profile = get_object_or_404(Profile, pk=pk)
+        return user_profile
 
 
 class ProfilesListView(ListView):
