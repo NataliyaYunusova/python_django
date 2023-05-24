@@ -9,14 +9,45 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth import authenticate, login, logout
 from django.urls import reverse, reverse_lazy
 from django.views import View
+from django.utils.translation import gettext_lazy as _, ngettext
 
 from .models import Profile
 from .forms import ProfileForm, UserForm, ProfileAvatarForm
 
 
+class HelloView(View):
+    welcome_message = _("welcome hello world")
+
+    def get(self, request: HttpRequest) -> HttpResponse:
+        items_str = request.GET.get("items") or 0
+        items = int(items_str)
+        products_line = ngettext(
+            "one product",
+            "{count} products",
+            items
+        )
+        products_line = products_line.format(count=items)
+        return HttpResponse(
+            f"<h1>{self.welcome_message}</h1>"
+            f"\n<h2>{products_line}</h2>"
+
+        )
+
+
 class AboutMeView(TemplateView):
     template_name = "myauth/about-me.html"
     model = Profile
+
+# class AboutMeView(UpdateView):
+#     model = Profile
+#     fields = ['avatar']
+#     template_name = "myauth/about-me.html"
+#
+#     def get_success_url(self):
+#         return reverse_lazy('myauth:about-me')
+#
+#     def get_object(self, queryset=None):
+#         return self.request.user.profile
 
 
 class RegisterView(CreateView):
@@ -136,7 +167,6 @@ class PhotoUpdateView(LoginRequiredMixin, UpdateView):
 
     def get_object(self, queryset=None):
         pk = self.kwargs.get("pk")
-        print('user_id = ', pk)
         user_profile = get_object_or_404(Profile, pk=pk)
         return user_profile
 
