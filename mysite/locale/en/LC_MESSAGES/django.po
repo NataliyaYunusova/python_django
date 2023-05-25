@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-24 19:44+0000\n"
+"POT-Creation-Date: 2023-05-25 20:27+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -54,7 +54,7 @@ msgid ""
 msgid_plural ""
 "\n"
 "            There are %(orders_count)s orders.\n"
-"        "
+"            "
 msgstr[0] ""
 msgstr[1] ""
 
@@ -86,6 +86,102 @@ msgstr "No orders yet"
 msgid "Create a new order"
 msgstr "Create a new order"
 
+#: shopapp/templates/shopapp/product_confirm_delete.html:5
+msgid "Confirm archive"
+msgstr "Confirm archive"
+
+#: shopapp/templates/shopapp/product_confirm_delete.html:10
+msgid "Are you sure you want to archive"
+msgstr "Are you sure you want to archive"
+
+#: shopapp/templates/shopapp/product_confirm_delete.html:15
+msgid "Back to product"
+msgstr "Back to product"
+
+#: shopapp/templates/shopapp/product_confirm_delete.html:24
+msgid "Archive"
+msgstr "Archive"
+
+#: shopapp/templates/shopapp/product_form.html:5
+msgid "Create product"
+msgstr "Create product"
+
+#: shopapp/templates/shopapp/product_form.html:10
+#: shopapp/templates/shopapp/product_form.html:17
+msgid "Create"
+msgstr "Create"
+
+#: shopapp/templates/shopapp/product_form.html:23
+#: shopapp/templates/shopapp/products-details.html:77
+msgid "Back to products list"
+msgstr "Back to products list"
+
+#: shopapp/templates/shopapp/product_update_form.html:5
+#: shopapp/templates/shopapp/product_update_form.html:10
+#: shopapp/templates/shopapp/products-details.html:65
+msgid "Update product"
+msgstr "Update product"
+
+#: shopapp/templates/shopapp/product_update_form.html:17
+msgid "Update"
+msgstr "Update"
+
+#: shopapp/templates/shopapp/product_update_form.html:23
+msgid "Back to"
+msgstr "Back to"
+
+#: shopapp/templates/shopapp/products-details.html:5
+#: shopapp/templates/shopapp/products-details.html:10
+msgid "Product"
+msgstr "Product"
+
+#: shopapp/templates/shopapp/products-details.html:14
+#, python-format
+msgid ""
+"\n"
+"            There is only one image.\n"
+"            "
+msgid_plural ""
+"\n"
+"            There are %(images_count)s images.\n"
+"            "
+msgstr[0] ""
+msgstr[1] ""
+
+#: shopapp/templates/shopapp/products-details.html:21
+msgid "Product has not image yet"
+msgstr "Product has not image yet"
+
+#: shopapp/templates/shopapp/products-details.html:28
+msgid "Description"
+msgstr "Description"
+
+#: shopapp/templates/shopapp/products-details.html:31
+#: shopapp/templates/shopapp/products-list.html:27
+msgid "Price"
+msgstr "Price"
+
+#: shopapp/templates/shopapp/products-details.html:34
+#: shopapp/templates/shopapp/products-list.html:29
+msgid "Discount"
+msgstr "Discount"
+
+#: shopapp/templates/shopapp/products-details.html:37
+msgid "Archived"
+msgstr "Archived"
+
+#: shopapp/templates/shopapp/products-details.html:44
+msgid "Images"
+msgstr "Images"
+
+#: shopapp/templates/shopapp/products-details.html:55
+msgid "No images uploaded yet"
+msgstr "No images uploaded yet"
+
+#: shopapp/templates/shopapp/products-details.html:71
+msgid "Archive product"
+msgstr "Archived"
+
 #: shopapp/templates/shopapp/products-list.html:5
 msgid "Products list"
 msgstr "Products list"
@@ -103,7 +199,7 @@ msgid ""
 msgid_plural ""
 "\n"
 "            There are %(product_count)s products.\n"
-"        "
+"            "
 msgstr[0] ""
 msgstr[1] ""
 
@@ -112,17 +208,9 @@ msgctxt "product name"
 msgid "Name"
 msgstr "Name"
 
-#: shopapp/templates/shopapp/products-list.html:27
-msgid "Price"
-msgstr "Price"
-
 #: shopapp/templates/shopapp/products-list.html:28
 msgid "no discount"
 msgstr "no discount"
-
-#: shopapp/templates/shopapp/products-list.html:29
-msgid "Discount"
-msgstr "Discount"
 
 #: shopapp/templates/shopapp/products-list.html:42
 msgid "Create a new product"

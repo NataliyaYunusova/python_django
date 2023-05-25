@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-24 19:44+0000\n"
+"POT-Creation-Date: 2023-05-25 20:27+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -48,7 +48,6 @@ msgid "Orders"
 msgstr "Заказы"
 
 #: shopapp/templates/shopapp/order_list.html:12
-#, python-format
 msgid ""
 "\n"
 "            There is only one order.\n"
@@ -56,7 +55,7 @@ msgid ""
 msgid_plural ""
 "\n"
 "            There are %(orders_count)s orders.\n"
-"        "
+"            "
 msgstr[0] ""
 "\n"
 "            Доступен только один заказ.\n"
@@ -98,6 +97,111 @@ msgstr "Пока нет заказов"
 msgid "Create a new order"
 msgstr "Создать новый заказ"
 
+#: shopapp/templates/shopapp/product_confirm_delete.html:5
+msgid "Confirm archive"
+msgstr "Архивировать"
+
+#: shopapp/templates/shopapp/product_confirm_delete.html:10
+msgid "Are you sure you want to archive"
+msgstr "Вы уверены что хотите архивировать"
+
+#: shopapp/templates/shopapp/product_confirm_delete.html:15
+msgid "Back to product"
+msgstr "Вернуться к товару"
+
+#: shopapp/templates/shopapp/product_confirm_delete.html:24
+msgid "Archive"
+msgstr "Архивировать"
+
+#: shopapp/templates/shopapp/product_form.html:5
+msgid "Create product"
+msgstr "Создать новый товар"
+
+#: shopapp/templates/shopapp/product_form.html:10
+#: shopapp/templates/shopapp/product_form.html:17
+msgid "Create"
+msgstr "Создать"
+
+#: shopapp/templates/shopapp/product_form.html:23
+#: shopapp/templates/shopapp/products-details.html:77
+msgid "Back to products list"
+msgstr "Вернуться к списку товаров"
+
+#: shopapp/templates/shopapp/product_update_form.html:5
+#: shopapp/templates/shopapp/product_update_form.html:10
+#: shopapp/templates/shopapp/products-details.html:65
+msgid "Update product"
+msgstr "Обновить товар"
+
+#: shopapp/templates/shopapp/product_update_form.html:17
+msgid "Update"
+msgstr "Обновить"
+
+#: shopapp/templates/shopapp/product_update_form.html:23
+msgid "Back to"
+msgstr "Вернуться к товару "
+
+#: shopapp/templates/shopapp/products-details.html:5
+#: shopapp/templates/shopapp/products-details.html:10
+msgid "Product"
+msgstr "Товар"
+
+#: shopapp/templates/shopapp/products-details.html:14
+msgid ""
+"\n"
+"            There is only one image.\n"
+"            "
+msgid_plural ""
+"\n"
+"            There are %(images_count)s images.\n"
+"            "
+msgstr[0] ""
+"\n"
+"            Доступно только одно изображение.\n"
+"        "
+msgstr[1] ""
+"\n"
+"            Доступно %(images_count)s изображения.\n"
+"        "
+msgstr[2] ""
+"\n"
+"            Доступно %(images_count)s изображений.\n"
+"        "
+
+#: shopapp/templates/shopapp/products-details.html:21
+msgid "Product has not image yet"
+msgstr "Товар ещё не имеет изображений"
+
+#: shopapp/templates/shopapp/products-details.html:28
+msgid "Description"
+msgstr "Описание"
+
+#: shopapp/templates/shopapp/products-details.html:31
+#: shopapp/templates/shopapp/products-list.html:27
+msgid "Price"
+msgstr "Цена"
+
+#: shopapp/templates/shopapp/products-details.html:34
+#: shopapp/templates/shopapp/products-list.html:29
+msgid "Discount"
+msgstr "Скидка"
+
+#: shopapp/templates/shopapp/products-details.html:37
+msgid "Archived"
+msgstr "Архивирован"
+
+#: shopapp/templates/shopapp/products-details.html:44
+msgid "Images"
+msgstr "Изображения"
+
+#: shopapp/templates/shopapp/products-details.html:55
+msgid "No images uploaded yet"
+msgstr "Товар ещё не имеет изображений"
+
+#: shopapp/templates/shopapp/products-details.html:71
+msgid "Archive product"
+msgstr "Архивировать"
+
 #: shopapp/templates/shopapp/products-list.html:5
 msgid "Products list"
 msgstr "Список товаров"
@@ -115,7 +219,7 @@ msgid ""
 msgid_plural ""
 "\n"
 "            There are %(product_count)s products.\n"
-"        "
+"            "
 msgstr[0] ""
 "\n"
 "            Доступен %(product_count)s товар.\n"
@@ -134,17 +238,9 @@ msgctxt "product name"
 msgid "Name"
 msgstr "Название"
 
-#: shopapp/templates/shopapp/products-list.html:27
-msgid "Price"
-msgstr "Цена"
-
 #: shopapp/templates/shopapp/products-list.html:28
 msgid "no discount"
 msgstr "нет скидки"
-
-#: shopapp/templates/shopapp/products-list.html:29
-msgid "Discount"
-msgstr "Скидка"
 
 #: shopapp/templates/shopapp/products-list.html:42
 msgid "Create a new product"
