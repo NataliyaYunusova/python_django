@@ -1,15 +1,25 @@
+"""
+В этом модуле лежат различные наборы представлений.
+
+Разные view интернет-магазина: по товарам, заказам и т.д.
+"""
+
 from timeit import default_timer
 
 from django.contrib.auth.models import Group
-from django.http import HttpRequest, HttpResponse, HttpResponseRedirect, JsonResponse
+from django.http import \
+    HttpRequest, HttpResponse, HttpResponseRedirect, JsonResponse
 from django.shortcuts import render, redirect, reverse
 from django.urls import reverse_lazy
 from django.views import View
-from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
-from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin, UserPassesTestMixin
+from django.views.generic import \
+    ListView, DetailView, CreateView, UpdateView, DeleteView
+from django.contrib.auth.mixins import \
+    LoginRequiredMixin, PermissionRequiredMixin, UserPassesTestMixin
 from rest_framework.viewsets import ModelViewSet
 from rest_framework.filters import SearchFilter, OrderingFilter
 from django_filters.rest_framework import DjangoFilterBackend
+from drf_spectacular.utils import extend_schema, OpenApiResponse
 
 from .forms import GroupForm
 from .forms import ProductForm
@@ -17,7 +27,14 @@ from .models import Product, Order, ProductImage
 from .serializers import ProductSerializer, OrderSerializer
 
 
+@extend_schema(description='Product views CRUD')
 class ProductViewSet(ModelViewSet):
+    """
+    Набор представлений для действий над Product.
+
+    Полный CRUD для сущностей товара
+    """
+
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
     filter_backends = [
@@ -38,6 +55,17 @@ class ProductViewSet(ModelViewSet):
         "price",
         "discount",
     ]
+
+    @extend_schema(
+        summary="Get one product by ID",
+        description='Retrieves **product**, returns 404 if not found',
+        responses={
+            200: ProductSerializer,
+            404: OpenApiResponse(description="Empty response, product by id not found"),
+        }
+    )
+    def retrieve(self, *args, **kwargs):
+        return super().retrieve(*args, **kwargs)
 
 
 class OrderViewSet(ModelViewSet):
@@ -113,7 +141,8 @@ class ProductCreateView(PermissionRequiredMixin, CreateView):
 
     def test_func(self):
     # return self.request.user.groups.filter(name="secret-group").exists()
-        return self.request.user.is_superuser or self.request.user.has_perm(self.permission_required)
+        return self.request.user.is_superuser or \
+               self.request.user.has_perm(self.permission_required)
 
     def form_valid(self, form):
         form.instance.created_by = self.request.user
