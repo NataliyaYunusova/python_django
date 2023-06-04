@@ -1,0 +1,28 @@
+{% extends 'blogapp/base.html' %}
+
+{% block title %}
+    Authors:
+{% endblock %}
+
+{% block body %}
+    <h1>
+        Tags:
+    </h1>
+    {% if  tags %}
+        <div>
+            {% for tag in tags %}
+                <p>
+                    {{ tag.name }}
+                </p>
+            {% endfor%}
+        </div>
+    {% else %}
+        <h3>No tags yet </h3>
+    {% endif %}
+    <div>
+        <a href="{% url 'blogapp:create_tag' %}">
+            Create a new tag
+        </a>
+    </div>
+
+{% endblock %}
