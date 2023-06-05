@@ -1,0 +1,28 @@
+{% extends 'blogapp/base.html' %}
+
+{% block title %}
+    Authors:
+{% endblock %}
+
+{% block body %}
+    <h1>
+        Authors:
+    </h1>
+    {% if  authors %}
+        <div>
+            {% for author in authors %}
+                <p>
+                    {{ author.name }}
+                </p>
+            {% endfor%}
+        </div>
+    {% else %}
+        <h3>No authors yet </h3>
+    {% endif %}
+    <div>
+        <a href="{% url 'blogapp:create_author' %}">
+            Create a new author
+        </a>
+    </div>
+
+{% endblock %}

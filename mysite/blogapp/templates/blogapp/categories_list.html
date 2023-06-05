@@ -1,0 +1,28 @@
+{% extends 'blogapp/base.html' %}
+
+{% block title %}
+    Authors:
+{% endblock %}
+
+{% block body %}
+    <h1>
+        Categories:
+    </h1>
+    {% if  categories %}
+        <div>
+            {% for category in categories %}
+                <p>
+                    {{ category.name }}
+                </p>
+            {% endfor%}
+        </div>
+    {% else %}
+        <h3>No categories yet </h3>
+    {% endif %}
+    <div>
+        <a href="{% url 'blogapp:create_category' %}">
+            Create a new category
+        </a>
+    </div>
+
+{% endblock %}
