@@ -14,6 +14,10 @@ from django.utils.translation import gettext_lazy as _, ngettext
 from .models import Profile
 from .forms import ProfileForm, UserForm, ProfileAvatarForm
 
+import logging
+
+logger = logging.getLogger(__name__)
+
 
 class HelloView(View):
     welcome_message = _("welcome hello world")
@@ -70,19 +74,23 @@ class RegisterView(CreateView):
 
 
 def login_view(request: HttpRequest) -> HttpResponse:
+    logger.info('Попытка аутентификации пользователя')
     if request.method == "GET":
         if request.user.is_authenticated:
             return redirect("/admin/")
         return render(request, "myauth/login.html")
 
     username = request.POST["username"]
+
     password = request.POST["password"]
 
     user = authenticate(request, username=username, password=password)
     if user is not None:
         login(request, user)
+        logger.info(f'Пользователь {username} успешно аутентифицирован')
         return redirect("/admin/")
 
+    logger.warning(f'Неудачная попытка аутентификации пользователя с именем {username}')
     return render(request, "myauth/login.html", {"error": "Invalid login credentials"})
 
 
@@ -92,6 +100,7 @@ def logout_view(request: HttpRequest) -> HttpResponse:
 
 
 class MyLogoutView(LogoutView):
+    logger.info('Пользователь вышел из системы')
     next_page = reverse_lazy("myauth:login")
 
 

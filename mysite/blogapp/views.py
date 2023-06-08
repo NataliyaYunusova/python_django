@@ -1,12 +1,16 @@
 from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views.generic import ListView, CreateView
-
-from .forms import AuthorForm
 from .models import Article, Author, Category, Tag
+
+import logging
+
+
+logger = logging.getLogger(__name__)
 
 
 class ArticlesListView(ListView):
+    logger.info('Запрошена страница со списком статей')
     model = Article
     context_object_name = "articles"
     template_name = "blogapp/article_list.html"

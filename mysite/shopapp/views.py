@@ -25,6 +25,9 @@ from .forms import GroupForm
 from .forms import ProductForm
 from .models import Product, Order, ProductImage
 from .serializers import ProductSerializer, OrderSerializer
+import logging
+
+logger = logging.getLogger(__name__)
 
 
 @extend_schema(description='Product views CRUD')
@@ -146,6 +149,7 @@ class ProductCreateView(PermissionRequiredMixin, CreateView):
 
     def form_valid(self, form):
         form.instance.created_by = self.request.user
+        logger.info(f'Пользователь {self.request.user.username} создал новый товар')
         return super().form_valid(form)
 
 
@@ -205,6 +209,7 @@ class ProductDataExportView(View):
 
 
 class OrderListView(LoginRequiredMixin, ListView):
+    logger.info('Запрошен список товаров')
     queryset = (
         Order.objects
         .select_related("user")
@@ -225,6 +230,10 @@ class OrderCreateView(CreateView):
     model = Order
     fields = "delivery_address", "promocode", "user", "products"
     success_url = reverse_lazy("shopapp:orders_list")
+
+    def form_valid(self, form):
+        logger.info(f'Пользователь {self.request.user.username} создал новый заказ')
+        return super().form_valid(form)
 
 
 class OrderUpdateView(UpdateView):
