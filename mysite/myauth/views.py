@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 from django.views.generic import CreateView, TemplateView, ListView, DetailView, UpdateView
 from django.contrib.auth.decorators import login_required, permission_required, user_passes_test
 from django.contrib.auth.forms import UserCreationForm
-from django.contrib.auth.views import LogoutView
+from django.contrib.auth.views import LogoutView, LoginView
 from django.http import HttpRequest, HttpResponse, JsonResponse
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth import authenticate, login, logout
@@ -74,7 +74,6 @@ class RegisterView(CreateView):
 
 
 def login_view(request: HttpRequest) -> HttpResponse:
-    logger.info('Попытка аутентификации пользователя')
     if request.method == "GET":
         if request.user.is_authenticated:
             return redirect("/admin/")
@@ -87,11 +86,23 @@ def login_view(request: HttpRequest) -> HttpResponse:
     user = authenticate(request, username=username, password=password)
     if user is not None:
         login(request, user)
-        logger.info(f'Пользователь {username} успешно аутентифицирован')
         return redirect("/admin/")
-
-    logger.warning(f'Неудачная попытка аутентификации пользователя с именем {username}')
     return render(request, "myauth/login.html", {"error": "Invalid login credentials"})
+
+
+class MyLoginView(LoginView):
+    template_name = "myauth/login.html"
+    redirect_authenticated_user = True
+
+    def form_valid(self, form):
+        username = form.cleaned_data.get('username')
+        logger.info(f'Пользователь {username} успешно аутентифицирован')
+        return super().form_valid(form)
+
+    def form_invalid(self, form):
+        username = form.data.get('username')
+        logger.warning(f'Неудачная попытка аутентификации пользователя {username}')
+        return super().form_invalid(form)
 
 
 def logout_view(request: HttpRequest) -> HttpResponse:
@@ -100,8 +111,12 @@ def logout_view(request: HttpRequest) -> HttpResponse:
 
 
 class MyLogoutView(LogoutView):
-    logger.info('Пользователь вышел из системы')
     next_page = reverse_lazy("myauth:login")
+
+    def dispatch(self, request, *args, **kwargs):
+        logger.info(f'Пользователь {request.user.username} вышел из системы')
+        response = super().dispatch(request, *args, **kwargs)
+        return response
 
 
 @user_passes_test(lambda u: u.is_superuser)

@@ -135,6 +135,11 @@ class ProductsListView(ListView):
     context_object_name = "products"
     queryset = Product.objects.filter(archived=False)
 
+    def dispatch(self, request, *args, **kwargs):
+        logger.info('Запрошена страница со списком товаров')
+        response = super().dispatch(request, *args, **kwargs)
+        return response
+
 
 class ProductCreateView(PermissionRequiredMixin, CreateView):
     permission_required = "shopapp.add_product"
@@ -209,12 +214,16 @@ class ProductDataExportView(View):
 
 
 class OrderListView(LoginRequiredMixin, ListView):
-    logger.info('Запрошен список товаров')
     queryset = (
         Order.objects
         .select_related("user")
         .prefetch_related("products")
     )
+
+    def dispatch(self, request, *args, **kwargs):
+        logger.info('Запрошена страница со списком заказов')
+        response = super().dispatch(request, *args, **kwargs)
+        return response
 
 
 class OrderDetailView(PermissionRequiredMixin, DetailView):

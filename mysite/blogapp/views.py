@@ -10,7 +10,6 @@ logger = logging.getLogger(__name__)
 
 
 class ArticlesListView(ListView):
-    logger.info('Запрошена страница со списком статей')
     model = Article
     context_object_name = "articles"
     template_name = "blogapp/article_list.html"
@@ -20,6 +19,11 @@ class ArticlesListView(ListView):
         .prefetch_related("tags")
         .defer("content")
     )
+
+    def dispatch(self, request, *args, **kwargs):
+        logger.info('Запрошена страница со списком статей')
+        response = super().dispatch(request, *args, **kwargs)
+        return response
 
 
 class ArticleCreateView(CreateView):
@@ -40,6 +44,11 @@ class AuthorsListView(ListView):
     model = Author
     context_object_name = "authors"
     template_name = "blogapp/authors_list.html"
+
+    def dispatch(self, request, *args, **kwargs):
+        logger.info('Запрошена страница со списком авторов')
+        response = super().dispatch(request, *args, **kwargs)
+        return response
 
 
 class CategoryCreateView(CreateView):
