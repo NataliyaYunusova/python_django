@@ -1,9 +1,12 @@
 from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views.generic import ListView, CreateView
-
-from .forms import AuthorForm
 from .models import Article, Author, Category, Tag
+
+import logging
+
+
+logger = logging.getLogger(__name__)
 
 
 class ArticlesListView(ListView):
@@ -16,6 +19,11 @@ class ArticlesListView(ListView):
         .prefetch_related("tags")
         .defer("content")
     )
+
+    def dispatch(self, request, *args, **kwargs):
+        logger.info('Запрошена страница со списком статей')
+        response = super().dispatch(request, *args, **kwargs)
+        return response
 
 
 class ArticleCreateView(CreateView):
@@ -36,6 +44,11 @@ class AuthorsListView(ListView):
     model = Author
     context_object_name = "authors"
     template_name = "blogapp/authors_list.html"
+
+    def dispatch(self, request, *args, **kwargs):
+        logger.info('Запрошена страница со списком авторов')
+        response = super().dispatch(request, *args, **kwargs)
+        return response
 
 
 class CategoryCreateView(CreateView):

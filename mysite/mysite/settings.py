@@ -16,6 +16,9 @@ from django.urls import reverse_lazy
 
 from django.utils.translation import gettext_lazy as _
 
+import sentry_sdk
+from sentry_sdk.integrations.django import DjangoIntegration
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -51,6 +54,7 @@ INSTALLED_APPS = [
     'myauth.apps.MyauthConfig',
     'myapiapp.apps.MyapiappConfig',
     'blogapp.apps.BlogappConfig',
+    'debug_toolbar',
     'requestdataapp.apps.RequestdataappConfig',
 ]
 
@@ -62,6 +66,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
     # 'requestdataapp.middlewares.setup_useragent_on_request_middleware',
     # 'requestdataapp.middlewares.CountRequestMiddleware',
     # 'requestdataapp.middlewares.ThrottlingMiddleware',
@@ -176,22 +181,57 @@ SPECTACULAR_SETTINGS = {
 
 LOGGING = {
     'version': 1,
-    'filters': {
-        'require_debug_true': {
-            '()': 'django.utils.log.RequireDebugTrue',
-        },
-    },
+    'disable_existing_loggers': False,
     'handlers': {
+        'file': {
+            'level': 'INFO',
+            # 'filters': ['require_debug_true'],
+            'class': 'logging.FileHandler',
+            'filename': 'debug.log'
+        },
         'console': {
-            'level': 'DEBUG',
-            'filters': ['require_debug_true'],
+            'level': 'INFO',
             'class': 'logging.StreamHandler',
-        },
+        }
     },
-    'loggers': {
-        'django.db.backends': {
-            'level': 'DEBUG',
-            'handlers': ['console'],
-        },
+    'root': {
+        # 'handlers': ['console'],
+        'handlers': ['file', 'console'],
+        'level': 'DEBUG',
+        'propagate': True,
     },
+    #
+    #
+    # 'filters': {
+    #     'require_debug_true': {
+    #         '()': 'django.utils.log.RequireDebugTrue',
+    #     },
+    # },
+    #
+    # 'loggers': {
+    #     'django.db.backends': {
+    #         'level': 'DEBUG',
+    #         'handlers': ['console'],
+    #     },
+    # },
 }
+
+INTERNAL_IPS = [
+    '127.0.0.1',
+]
+
+# sentry_sdk.init(
+#     dsn="https://63ac4bb5e2d34aba94d546bf83db6f89@o4505314052341760.ingest.sentry.io/4505314052407296",
+#     integrations=[
+#         DjangoIntegration(),
+#     ],
+#
+#     # Set traces_sample_rate to 1.0 to capture 100%
+#     # of transactions for performance monitoring.
+#     # We recommend adjusting this value in production.
+#     traces_sample_rate=1.0,
+#
+#     # If you wish to associate users to errors (assuming you are using
+#     # django.contrib.auth) you may enable sending PII data.
+#     send_default_pii=True
+# )

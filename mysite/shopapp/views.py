@@ -25,6 +25,9 @@ from .forms import GroupForm
 from .forms import ProductForm
 from .models import Product, Order, ProductImage
 from .serializers import ProductSerializer, OrderSerializer
+import logging
+
+logger = logging.getLogger(__name__)
 
 
 @extend_schema(description='Product views CRUD')
@@ -132,6 +135,11 @@ class ProductsListView(ListView):
     context_object_name = "products"
     queryset = Product.objects.filter(archived=False)
 
+    def dispatch(self, request, *args, **kwargs):
+        logger.info('Запрошена страница со списком товаров')
+        response = super().dispatch(request, *args, **kwargs)
+        return response
+
 
 class ProductCreateView(PermissionRequiredMixin, CreateView):
     permission_required = "shopapp.add_product"
@@ -146,6 +154,7 @@ class ProductCreateView(PermissionRequiredMixin, CreateView):
 
     def form_valid(self, form):
         form.instance.created_by = self.request.user
+        logger.info(f'Пользователь {self.request.user.username} создал новый товар')
         return super().form_valid(form)
 
 
@@ -211,6 +220,11 @@ class OrderListView(LoginRequiredMixin, ListView):
         .prefetch_related("products")
     )
 
+    def dispatch(self, request, *args, **kwargs):
+        logger.info('Запрошена страница со списком заказов')
+        response = super().dispatch(request, *args, **kwargs)
+        return response
+
 
 class OrderDetailView(PermissionRequiredMixin, DetailView):
     permission_required = "shopapp.view_order"
@@ -225,6 +239,10 @@ class OrderCreateView(CreateView):
     model = Order
     fields = "delivery_address", "promocode", "user", "products"
     success_url = reverse_lazy("shopapp:orders_list")
+
+    def form_valid(self, form):
+        logger.info(f'Пользователь {self.request.user.username} создал новый заказ')
+        return super().form_valid(form)
 
 
 class OrderUpdateView(UpdateView):

@@ -1,4 +1,4 @@
-from django.contrib.auth.views import LoginView
+# from django.contrib.auth.views import LoginView
 from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
@@ -7,8 +7,9 @@ from .views import (
     set_cookie_view,
     get_session_view,
     set_session_view,
-    logout_view,
+    # logout_view,
     MyLogoutView,
+    MyLoginView,
     AboutMeView,
     RegisterView,
     FooBarView,
@@ -24,14 +25,15 @@ from .views import (
 app_name = 'myauth'
 
 urlpatterns = [
-    path(
-        'login/',
-        LoginView.as_view(
-            template_name="myauth/login.html",
-            redirect_authenticated_user=True,
-        ),
-        name="login",
-    ),
+    # path(
+    #     'login/',
+    #     LoginView.as_view(
+    #         template_name="myauth/login.html",
+    #         redirect_authenticated_user=True,
+    #     ),
+    #     name="login",
+    # ),
+    path("login/", MyLoginView.as_view(), name="login"),
     path("hello/", HelloView.as_view(), name="hello"),
     path("logout/", MyLogoutView.as_view(), name="logout"),
     path("about-me/", AboutMeView.as_view(), name="about-me"),
