@@ -104,6 +104,8 @@ class ShopIndexView(View):
             "products": products,
             "items": 1,
         }
+        logger.debug("Products for shop index: %s", products)
+        logger.info("Rendering shop index")
         return render(request, "shopapp/shop-index.html", context=context)
 
 
@@ -210,6 +212,9 @@ class ProductDataExportView(View):
             }
             for product in products
         ]
+        elem = products_data[0]
+        name = elem["name"]
+        print('name: ', name)
         return JsonResponse({"products": products_data})
 
 

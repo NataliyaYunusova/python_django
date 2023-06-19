@@ -12,12 +12,11 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 from pathlib import Path
 
+import sentry_sdk
 from django.urls import reverse_lazy
 
 from django.utils.translation import gettext_lazy as _
-
-import sentry_sdk
-from sentry_sdk.integrations.django import DjangoIntegration
+# from sentry_sdk.integrations.django import DjangoIntegration
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -32,7 +31,21 @@ SECRET_KEY = 'django-insecure-qd(ch@_alvk*cb&xfolj$kkqnkl=tid6^r79cdle0qlwm+2lx8
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "0.0.0.0",
+    "127.0.0.1",
+]
+INTERNAL_IPS = [
+    '127.0.0.1',
+]
+
+if DEBUG:
+    import socket
+    hostname, _, ips = socket.gethostbyname_ex(socket.gethostname())
+    INTERNAL_IPS.append("10.0.2.2")
+    INTERNAL_IPS.extend(
+        [ip[: ip.rfind(".")] + ".1" for ip in ips]
+    )
 
 
 # Application definition
@@ -142,10 +155,10 @@ LOCALE_PATHS = [
     BASE_DIR / 'locale/'
 ]
 
-LANGUAGES = [
-    ('en', _('English')),
-    ('ru', _('Russian')),
-]
+# LANGUAGES = [
+#     ('en', _('English')),
+#     ('ru', _('Russian')),
+# ]
 
 
 # Static files (CSS, JavaScript, Images)
@@ -179,46 +192,43 @@ SPECTACULAR_SETTINGS = {
     "SERVE_INCLUDE_SCHEMA": False,
 }
 
+LOGFILE_NAME = BASE_DIR / "log.txt"
+# LOGFILE_SIZE = 400
+LOGFILE_SIZE = 1 * 1024 * 1024
+LOGFILE_COUNT = 3
+
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
-    'handlers': {
-        'file': {
-            'level': 'INFO',
-            # 'filters': ['require_debug_true'],
-            'class': 'logging.FileHandler',
-            'filename': 'debug.log'
+    'formatters': {
+        'verbose': {
+            'format': '%(asctime)s [%(levelname)s] %(name)s %(message)s'
         },
+    },
+    'handlers': {
         'console': {
             'level': 'INFO',
             'class': 'logging.StreamHandler',
-        }
+            'formatter': 'verbose',
+        },
+        'logfile': {
+            'class': 'logging.handlers.RotatingFileHandler',
+            'filename': LOGFILE_NAME,
+            'maxBytes': LOGFILE_SIZE,
+            'backupCount': LOGFILE_COUNT,
+            'formatter': 'verbose',
+        },
     },
     'root': {
-        # 'handlers': ['console'],
-        'handlers': ['file', 'console'],
-        'level': 'DEBUG',
+        'handlers': [
+            'logfile',
+            'console'
+        ],
+        'level': 'INFO',
         'propagate': True,
     },
-    #
-    #
-    # 'filters': {
-    #     'require_debug_true': {
-    #         '()': 'django.utils.log.RequireDebugTrue',
-    #     },
-    # },
-    #
-    # 'loggers': {
-    #     'django.db.backends': {
-    #         'level': 'DEBUG',
-    #         'handlers': ['console'],
-    #     },
-    # },
-}
 
-INTERNAL_IPS = [
-    '127.0.0.1',
-]
+}
 
 # sentry_sdk.init(
 #     dsn="https://63ac4bb5e2d34aba94d546bf83db6f89@o4505314052341760.ingest.sentry.io/4505314052407296",
@@ -235,3 +245,8 @@ INTERNAL_IPS = [
 #     # django.contrib.auth) you may enable sending PII data.
 #     send_default_pii=True
 # )
+
+sentry_sdk.init(
+    dsn="https://ef640ff0cff6495a892b489425488387@o4505314052341760.ingest.sentry.io/4505385901228032",
+    traces_sample_rate=1.0,
+)

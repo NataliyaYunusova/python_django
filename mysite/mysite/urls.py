@@ -33,7 +33,6 @@ urlpatterns = [
     path('api/schema/redoc/', SpectacularRedocView.as_view(url_name='schema'), name='redoc'),
     path('api/', include('myapiapp.urls')),
     path('blog/', include('blogapp.urls')),
-    path('__debug__/', include(debug_toolbar.urls)),
     # path('sentry-debug/', trigger_error),
    ]
 
@@ -48,4 +47,7 @@ if settings.DEBUG:
     )
     urlpatterns.extend(
         static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    )
+    urlpatterns.append(
+        path('__debug__/', include(debug_toolbar.urls)),
     )
