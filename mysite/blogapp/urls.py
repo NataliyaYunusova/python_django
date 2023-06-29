@@ -2,7 +2,9 @@ from django.urls import path
 
 from .views import (
     ArticlesListView,
+    ArticleDetailView,
     ArticleCreateView,
+    LatestArticlesFeed,
     AuthorCreateView,
     AuthorsListView,
     CategoryCreateView,
@@ -16,6 +18,8 @@ app_name = "blogapp"
 
 urlpatterns = [
     path("articles/", ArticlesListView.as_view(), name="article-list"),
+    path("articles/<int:pk>/", ArticleDetailView.as_view(), name="article"),
+    path("articles/latest/feed/", LatestArticlesFeed(), name="articles-feed"),
     path("articles/create/", ArticleCreateView.as_view(), name="create_article"),
     path("authors/create/", AuthorCreateView.as_view(), name="create_author"),
     path("authors/", AuthorsListView.as_view(), name="authors-list"),

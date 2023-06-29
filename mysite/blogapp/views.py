@@ -1,6 +1,9 @@
+from django.contrib.syndication.views import Feed
 from django.shortcuts import render
 from django.urls import reverse_lazy
-from django.views.generic import ListView, CreateView
+from django.views.generic import ListView, CreateView, DetailView
+from django.urls import reverse, reverse_lazy
+
 from .models import Article, Author, Category, Tag
 
 import logging
@@ -15,15 +18,43 @@ class ArticlesListView(ListView):
     template_name = "blogapp/article_list.html"
     queryset = (
         Article.objects
-        .select_related("author")
-        .prefetch_related("tags")
-        .defer("content")
+        .filter(published_at__isnull=False)
+        .order_by("-published_at")
+        # .select_related("author")
+        # .prefetch_related("tags")
+        # .defer("content")
     )
 
-    def dispatch(self, request, *args, **kwargs):
-        logger.info('Запрошена страница со списком статей')
-        response = super().dispatch(request, *args, **kwargs)
-        return response
+    # def dispatch(self, request, *args, **kwargs):
+    #     logger.info('Запрошена страница со списком статей')
+    #     response = super().dispatch(request, *args, **kwargs)
+    #     return response
+
+
+class ArticleDetailView(DetailView):
+    model = Article
+
+
+class LatestArticlesFeed(Feed):
+    title = "Block articles (latest)"
+    description = "Updates on changes and additions blog articles"
+    link = reverse_lazy("blogapp:article-list")
+
+    def items(self):
+        return (
+            Article.objects
+            .filter(published_at__isnull=False)
+            .order_by("-published_at")[:5]
+        )
+
+    def item_title(self, item: Article):
+        return item.title
+
+    def item_description(self, item: Article):
+        return item.body[:200]
+
+    # def item_link(self, item: Article):
+    #     return reverse("blogapp:article", kwargs={"pk": item.pk})
 
 
 class ArticleCreateView(CreateView):

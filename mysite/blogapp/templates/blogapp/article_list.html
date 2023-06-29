@@ -1,43 +1,48 @@
 {% extends 'blogapp/base.html' %}
 
 {% block title %}
-    Article list
+    Articles
 {% endblock %}
 
 {% block body %}
     <h1>
-        Articles list
+        Articles
     </h1>
-    {% if  articles %}
+    {% if  object_list %}
         <div>
-            {% for article in articles %}
-                <h2>
-                    {{ article.title }}
-                </h2>
-                <p>
-                    Date of publication: {{ article.pub_date }}
-                </p>
-                <p>
-                    Author: {{ article.author.name }}
-                </p>
+            {% for article in object_list %}
+                <div>
+                    <p>
+                        <a href="{% url 'blogapp:article' pk=article.pk %}">
+                            {{ article.title }}
+                        </a>
+                    </p>
+                    <p>
+                        Published: {{ article.published_at }}
+                    </p>
+                </div>
 
-                <p>
-                    Category: {{ article.category.name }}
-                </p>
-                <p>
-                    Tags:
-                    {% if article.tags %}
-                        {% for tag in article.tags.all %}
-                            {{ tag.name }}
-                        {% endfor %}
-                    {% else %}
-                            No tags yet
-                    {% endif %}
-                </p>
+<!--                <p>-->
+<!--                    Author: {{ article.author.name }}-->
+<!--                </p>-->
+
+<!--                <p>-->
+<!--                    Category: {{ article.category.name }}-->
+<!--                </p>-->
+<!--                <p>-->
+<!--                    Tags:-->
+<!--                    {% if article.tags %}-->
+<!--                        {% for tag in article.tags.all %}-->
+<!--                            {{ tag.name }}-->
+<!--                        {% endfor %}-->
+<!--                    {% else %}-->
+<!--                            No tags yet-->
+<!--                    {% endif %}-->
+<!--                </p>-->
             {% endfor%}
         </div>
     {% else %}
-        <h3>No articles yet </h3>
+        <h3>No published articles yet </h3>
     {% endif %}
     <div>
         <a href="{% url 'blogapp:create_article' %}">

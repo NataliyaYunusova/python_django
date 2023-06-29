@@ -1,7 +1,12 @@
 from django.contrib import admin
 from django.db.models import QuerySet
-from django.http import HttpRequest
+from django.http import HttpRequest, HttpResponse
+from django.shortcuts import render, redirect
+from django.urls import path
+
 from .admin_mixins import ExportAsCSVMixin
+from .common import save_csv_products
+from .forms import CSVImportForm
 
 from .models import Product, Order, ProductImage
 
@@ -26,6 +31,7 @@ class ProductInline(admin.StackedInline):
 
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin, ExportAsCSVMixin):
+    change_list_template = "shopapp/products_changelist.html"
     actions = [
         merk_archived,
         merk_unarchived,
@@ -63,10 +69,55 @@ class ProductAdmin(admin.ModelAdmin, ExportAsCSVMixin):
             return obj.description
         return obj.description[:48] + '...'
 
+    def import_csv(self, request: HttpRequest) -> HttpResponse:
+        if request.method == "GET":
+            form = CSVImportForm()
+            context = {
+                "form": form,
+            }
+            return render(request, "admin/csv_form.html", context)
+        form = CSVImportForm(request.POST, request.FILES)
+        if not form.is_valid():
+            context = {
+                "form": form,
+            }
+            return render(request, "admin/csv_form.html", context, status=400)
+        save_csv_products(
+            file=form.files["csv_file"].file,
+            encoding=request.encoding,
+        )
+        # reader = DictReader(csv_file)
+        # csv_file = TextIOWrapper(
+        #     form.files["csv_file"].file,
+        #     encoding=request.encoding,
+        # )
+        # reader = DictReader(csv_file)
+        #
+        # products = [
+        #     Product(**row)
+        #     for row in reader
+        # ]
+        # Product.objects.bulk_create(products)
+        self.message_user(request, "Data from CSV was imported")
+        return redirect("..")
+
+    def get_urls(self):
+        urls = super().get_urls()
+        new_urls = [
+            path(
+                "import-products_csv/",
+                self.import_csv,
+                name="import_products_csv",
+            ),
+        ]
+        return new_urls + urls
+
 
 # admin.site.register(Product, ProductAdmin)
 
 # class ProductInline(admin.TabularInline):
+
+
 class ProductInline(admin.StackedInline):
     model = Order.products.through
 

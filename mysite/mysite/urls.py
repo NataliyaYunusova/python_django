@@ -10,7 +10,10 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
+from django.contrib.sitemaps.views import sitemap
 from django.conf.urls.i18n import i18n_patterns
+
+from .sitemaps import sitemaps
 
 from drf_spectacular.views import (
     SpectacularAPIView,
@@ -34,6 +37,13 @@ urlpatterns = [
     path('api/', include('myapiapp.urls')),
     path('blog/', include('blogapp.urls')),
     # path('sentry-debug/', trigger_error),
+
+    path(
+        'sitemap.xml',
+        sitemap,
+        {"sitemaps": sitemaps},
+        name='django.contrib.sitemaps.views.sitemap',
+    )
    ]
 
 urlpatterns += i18n_patterns(

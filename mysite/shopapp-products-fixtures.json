@@ -1,0 +1,240 @@
+[
+  {
+    "model": "shopapp.product",
+    "pk": 1,
+    "fields": {
+      "name": "Laptop",
+      "description": "A laptop computer or notebook computer, also known as a laptop or notebook for short, is a small, portable personal computer (PC). Some description this is not a Desktop",
+      "price": "1999.00",
+      "discount": 0,
+      "created_at": "2023-04-28T14:08:45.719Z",
+      "created_by": null,
+      "archived": false,
+      "preview": ""
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 2,
+    "fields": {
+      "name": "Desktop(new)",
+      "description": "Desktop computer, a personal computer designed to fit on a desk",
+      "price": "2399.00",
+      "discount": 15,
+      "created_at": "2023-04-28T14:09:59.918Z",
+      "created_by": null,
+      "archived": false,
+      "preview": "products/product_2/preview/images_1_g68ONpx.jpeg"
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 3,
+    "fields": {
+      "name": "Smartphone",
+      "description": "A smartphone is a portable computer.",
+      "price": "987.00",
+      "discount": 10,
+      "created_at": "2023-04-28T14:11:14.965Z",
+      "created_by": null,
+      "archived": false,
+      "preview": "products/product_3/preview/Без_названия_1_H1fRbmK.jpeg"
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 4,
+    "fields": {
+      "name": "Tablet",
+      "description": "great tablet",
+      "price": "1234.00",
+      "discount": 0,
+      "created_at": "2023-04-30T08:35:21.160Z",
+      "created_by": 1,
+      "archived": false,
+      "preview": ""
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 5,
+    "fields": {
+      "name": "Phone2",
+      "description": "phone 2 is better than phone 1\r\nthis is a great phone",
+      "price": "1235.00",
+      "discount": 0,
+      "created_at": "2023-04-30T08:38:19.845Z",
+      "created_by": 1,
+      "archived": false,
+      "preview": ""
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 6,
+    "fields": {
+      "name": "Phone3",
+      "description": "phone 3",
+      "price": "999.42",
+      "discount": 12,
+      "created_at": "2023-04-30T08:40:56.772Z",
+      "created_by": 1,
+      "archived": false,
+      "preview": ""
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 7,
+    "fields": {
+      "name": "Tablet 2",
+      "description": "a new tablet",
+      "price": "1500.00",
+      "discount": 15,
+      "created_at": "2023-05-02T07:32:46.840Z",
+      "created_by": 1,
+      "archived": false,
+      "preview": ""
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 8,
+    "fields": {
+      "name": "Cupboard",
+      "description": "A cupboard is a piece of furniture for enclosing dishware or grocery items that are stored in a home.",
+      "price": "3999.00",
+      "discount": 5,
+      "created_at": "2023-05-02T08:24:51.596Z",
+      "created_by": 2,
+      "archived": false,
+      "preview": ""
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 9,
+    "fields": {
+      "name": "Chair",
+      "description": "A chair is a type of seat, typically designed for one person and consisting of one or more legs, a flat or slightly angled seat and a back-rest.",
+      "price": "1999.00",
+      "discount": 12,
+      "created_at": "2023-05-02T14:10:20.341Z",
+      "created_by": 2,
+      "archived": false,
+      "preview": ""
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 10,
+    "fields": {
+      "name": "TV",
+      "description": "Television (TV) is a telecommunication medium for transmitting moving images and sound. The term can refer to a television set, or the medium of television transmission.",
+      "price": "3999.00",
+      "discount": 0,
+      "created_at": "2023-05-03T10:25:13.836Z",
+      "created_by": 2,
+      "archived": false,
+      "preview": ""
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 11,
+    "fields": {
+      "name": "Headphones",
+      "description": "New headphones(too old)",
+      "price": "199.00",
+      "discount": 13,
+      "created_at": "2023-05-27T18:25:26.972Z",
+      "created_by": null,
+      "archived": true,
+      "preview": "products/product_11/preview/headphones.jpeg"
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 12,
+    "fields": {
+      "name": "Smartphone 1",
+      "description": "",
+      "price": "199.00",
+      "discount": 10,
+      "created_at": "2023-06-02T07:53:42.667Z",
+      "created_by": null,
+      "archived": false,
+      "preview": ""
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 13,
+    "fields": {
+      "name": "Smartphone 2",
+      "description": "",
+      "price": "299.00",
+      "discount": 10,
+      "created_at": "2023-06-02T07:53:42.667Z",
+      "created_by": null,
+      "archived": false,
+      "preview": ""
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 14,
+    "fields": {
+      "name": "Smartphone 3",
+      "description": "",
+      "price": "399.00",
+      "discount": 10,
+      "created_at": "2023-06-02T07:53:42.667Z",
+      "created_by": null,
+      "archived": false,
+      "preview": ""
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 15,
+    "fields": {
+      "name": "Smoothing-iron",
+      "description": "This is a good smoothing-iron",
+      "price": "1233.00",
+      "discount": 123,
+      "created_at": "2023-06-08T19:23:21.572Z",
+      "created_by": 2,
+      "archived": false,
+      "preview": ""
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 16,
+    "fields": {
+      "name": "Boat",
+      "description": "This is a good boat",
+      "price": "1344.00",
+      "discount": 5,
+      "created_at": "2023-06-08T19:33:57.311Z",
+      "created_by": 2,
+      "archived": false,
+      "preview": ""
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 17,
+    "fields": {
+      "name": "Tassel",
+      "description": "This is a good tassel",
+      "price": "99.00",
+      "discount": 5,
+      "created_at": "2023-06-10T20:07:12.406Z",
+      "created_by": 1,
+      "archived": false,
+      "preview": ""
+    }
+  }
+]
