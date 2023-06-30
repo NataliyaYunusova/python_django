@@ -12,5 +12,3 @@ class BlogSitemap(Sitemap):
 
     def lastmod(self, obj: Article):
         return obj.published_at
-
-

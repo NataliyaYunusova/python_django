@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<django-objects version="1.0">
+    <object model="shopapp.order" pk="1">
+        <field name="delivery_address" type="TextField">ul Pupkina, d 8</field>
+        <field name="promocode" type="CharField">SALE123</field>
+        <field name="created_at" type="DateTimeField">2023-04-28T17:28:04.752651+00:00</field>
+        <field name="user" rel="ManyToOneRel" to="auth.user">1</field>
+        <field name="receipt" type="FileField">orders/receipts/requirements_vX5patI.txt</field>
+        <field name="products" rel="ManyToManyRel" to="shopapp.product">
+            <object pk="2"></object>
+            <object pk="1"></object>
+        </field>
+    </object>
+    <object model="shopapp.order" pk="2">
+        <field name="delivery_address" type="TextField">ul. Repina 32</field>
+        <field name="promocode" type="CharField">123Smile</field>
+        <field name="created_at" type="DateTimeField">2023-05-02T09:37:37.449794+00:00</field>
+        <field name="user" rel="ManyToOneRel" to="auth.user">2</field>
+        <field name="receipt" type="FileField"></field>
+        <field name="products" rel="ManyToManyRel" to="shopapp.product">
+            <object pk="8"></object>
+        </field>
+    </object>
+    <object model="shopapp.order" pk="3">
+        <field name="delivery_address" type="TextField">ul. Repina 109</field>
+        <field name="promocode" type="CharField"></field>
+        <field name="created_at" type="DateTimeField">2023-05-28T17:55:59.661361+00:00</field>
+        <field name="user" rel="ManyToOneRel" to="auth.user">1</field>
+        <field name="receipt" type="FileField"></field>
+        <field name="products" rel="ManyToManyRel" to="shopapp.product">
+            <object pk="11"></object>
+            <object pk="6"></object>
+        </field>
+    </object>
+    <object model="shopapp.order" pk="4">
+        <field name="delivery_address" type="TextField">ul Ivanova, d 8</field>
+        <field name="promocode" type="CharField">promo1</field>
+        <field name="created_at" type="DateTimeField">2023-06-01T18:13:17.667431+00:00</field>
+        <field name="user" rel="ManyToOneRel" to="auth.user">1</field>
+        <field name="receipt" type="FileField"></field>
+        <field name="products" rel="ManyToManyRel" to="shopapp.product"></field>
+    </object>
+    <object model="shopapp.order" pk="5">
+        <field name="delivery_address" type="TextField">ul Ivanova, d 8</field>
+        <field name="promocode" type="CharField">promo2</field>
+        <field name="created_at" type="DateTimeField">2023-06-01T18:23:08.055484+00:00</field>
+        <field name="user" rel="ManyToOneRel" to="auth.user">1</field>
+        <field name="receipt" type="FileField"></field>
+        <field name="products" rel="ManyToManyRel" to="shopapp.product">
+            <object pk="9"></object>
+            <object pk="8"></object>
+            <object pk="2"></object>
+            <object pk="11"></object>
+            <object pk="1"></object>
+            <object pk="5"></object>
+            <object pk="6"></object>
+            <object pk="3"></object>
+            <object pk="10"></object>
+            <object pk="4"></object>
+            <object pk="7"></object>
+        </field>
+    </object>
+    <object model="shopapp.order" pk="6">
+        <field name="delivery_address" type="TextField">ul Ivanova, d 8</field>
+        <field name="promocode" type="CharField">promo3</field>
+        <field name="created_at" type="DateTimeField">2023-06-01T18:30:55.314372+00:00</field>
+        <field name="user" rel="ManyToOneRel" to="auth.user">1</field>
+        <field name="receipt" type="FileField"></field>
+        <field name="products" rel="ManyToManyRel" to="shopapp.product">
+            <object pk="9"></object>
+            <object pk="8"></object>
+            <object pk="2"></object>
+            <object pk="11"></object>
+            <object pk="1"></object>
+            <object pk="5"></object>
+            <object pk="6"></object>
+            <object pk="3"></object>
+            <object pk="10"></object>
+            <object pk="4"></object>
+            <object pk="7"></object>
+        </field>
+    </object>
+    <object model="shopapp.order" pk="7">
+        <field name="delivery_address" type="TextField">ul Ivanova, d 8</field>
+        <field name="promocode" type="CharField">promo4</field>
+        <field name="created_at" type="DateTimeField">2023-06-02T07:35:55.230729+00:00</field>
+        <field name="user" rel="ManyToOneRel" to="auth.user">1</field>
+        <field name="receipt" type="FileField"></field>
+        <field name="products" rel="ManyToManyRel" to="shopapp.product">
+            <object pk="9"></object>
+            <object pk="8"></object>
+            <object pk="2"></object>
+            <object pk="11"></object>
+            <object pk="1"></object>
+            <object pk="5"></object>
+            <object pk="6"></object>
+            <object pk="3"></object>
+            <object pk="10"></object>
+            <object pk="4"></object>
+            <object pk="7"></object>
+        </field>
+    </object>
+    <object model="shopapp.order" pk="8">
+        <field name="delivery_address" type="TextField">ul Ivanova, d 8</field>
+        <field name="promocode" type="CharField">promo5</field>
+        <field name="created_at" type="DateTimeField">2023-06-02T07:37:32.518952+00:00</field>
+        <field name="user" rel="ManyToOneRel" to="auth.user">1</field>
+        <field name="receipt" type="FileField"></field>
+        <field name="products" rel="ManyToManyRel" to="shopapp.product">
+            <object pk="9"></object>
+            <object pk="8"></object>
+            <object pk="2"></object>
+            <object pk="11"></object>
+            <object pk="1"></object>
+            <object pk="5"></object>
+            <object pk="6"></object>
+            <object pk="3"></object>
+            <object pk="10"></object>
+            <object pk="4"></object>
+            <object pk="7"></object>
+        </field>
+    </object>
+    <object model="shopapp.order" pk="9">
+        <field name="delivery_address" type="TextField">ul. Smishlyaeva</field>
+        <field name="promocode" type="CharField"></field>
+        <field name="created_at" type="DateTimeField">2023-06-06T20:30:48.266693+00:00</field>
+        <field name="user" rel="ManyToOneRel" to="auth.user">7</field>
+        <field name="receipt" type="FileField"></field>
+        <field name="products" rel="ManyToManyRel" to="shopapp.product">
+            <object pk="10"></object>
+            <object pk="7"></object>
+        </field>
+    </object>
+    <object model="shopapp.order" pk="10">
+        <field name="delivery_address" type="TextField">ul. Green 2</field>
+        <field name="promocode" type="CharField">123</field>
+        <field name="created_at" type="DateTimeField">2023-06-08T19:08:54.230970+00:00</field>
+        <field name="user" rel="ManyToOneRel" to="auth.user">2</field>
+        <field name="receipt" type="FileField"></field>
+        <field name="products" rel="ManyToManyRel" to="shopapp.product">
+            <object pk="10"></object>
+            <object pk="4"></object>
+            <object pk="7"></object>
+        </field>
+    </object>
+    <object model="shopapp.order" pk="11">
+        <field name="delivery_address" type="TextField">ul.Qwerty</field>
+        <field name="promocode" type="CharField">Smile</field>
+        <field name="created_at" type="DateTimeField">2023-06-08T19:37:57.483812+00:00</field>
+        <field name="user" rel="ManyToOneRel" to="auth.user">2</field>
+        <field name="receipt" type="FileField"></field>
+        <field name="products" rel="ManyToManyRel" to="shopapp.product">
+            <object pk="16"></object>
+            <object pk="9"></object>
+            <object pk="2"></object>
+        </field>
+    </object>
+    <object model="shopapp.order" pk="12">
+        <field name="delivery_address" type="TextField">ul. Qwerty, 5</field>
+        <field name="promocode" type="CharField">Smile</field>
+        <field name="created_at" type="DateTimeField">2023-06-08T19:54:19.950447+00:00</field>
+        <field name="user" rel="ManyToOneRel" to="auth.user">1</field>
+        <field name="receipt" type="FileField"></field>
+        <field name="products" rel="ManyToManyRel" to="shopapp.product">
+            <object pk="9"></object>
+            <object pk="12"></object>
+            <object pk="4"></object>
+        </field>
+    </object>
+    <object model="shopapp.order" pk="13">
+        <field name="delivery_address" type="TextField">ul. Gubkina, 13</field>
+        <field name="promocode" type="CharField">Sunshine</field>
+        <field name="created_at" type="DateTimeField">2023-06-10T20:10:29.244958+00:00</field>
+        <field name="user" rel="ManyToOneRel" to="auth.user">6</field>
+        <field name="receipt" type="FileField"></field>
+        <field name="products" rel="ManyToManyRel" to="shopapp.product">
+            <object pk="16"></object>
+            <object pk="8"></object>
+            <object pk="2"></object>
+        </field>
+    </object>
+</django-objects>

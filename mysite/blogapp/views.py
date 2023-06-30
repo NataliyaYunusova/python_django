@@ -36,7 +36,7 @@ class ArticleDetailView(DetailView):
 
 
 class LatestArticlesFeed(Feed):
-    title = "Block articles (latest)"
+    title = "Blog articles (latest)"
     description = "Updates on changes and additions blog articles"
     link = reverse_lazy("blogapp:article-list")
 

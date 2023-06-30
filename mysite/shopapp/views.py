@@ -8,6 +8,7 @@ from timeit import default_timer
 from csv import DictWriter
 
 from django.contrib.auth.models import Group
+from django.contrib.syndication.views import Feed
 from django.http import(
     HttpRequest,
     HttpResponse,
@@ -126,6 +127,21 @@ class ProductViewSet(ModelViewSet):
         # return Response({"ok": True})
         serializer = self.get_serializer(products, many=True)
         return Response(serializer.data)
+
+
+class LatestProductsFeed(Feed):
+    title = "Products (latest)"
+    description = "Updates on changes and additions products"
+    link = reverse_lazy("shopapp:products_list")
+
+    def items(self):
+        return Product.objects.filter(archived=False)[:5]
+
+    def item_name(self, item: Product):
+        return item.name
+
+    def item_description(self, item: Product):
+        return item.description[:100]
 
 
 class OrderViewSet(ModelViewSet):
