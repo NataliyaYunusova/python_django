@@ -1,5 +1,6 @@
 from django.contrib.auth.models import User
 from django.db import models
+from django.urls import reverse
 
 
 def product_preview_directory_path(instance: "Product", filename: str) -> str:
@@ -35,6 +36,9 @@ class Product(models.Model):
     #     if len(self.description) < 48:
     #         return self.description
     #     return self.description[:48] + '...'
+
+    def get_absolute_url(self):
+        return reverse("shopapp:product", kwargs={"pk": self.pk})
 
     def __str__(self) -> str:
         return f'Product(pk={self.pk}, name={self.name!r})'
