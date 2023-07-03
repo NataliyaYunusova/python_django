@@ -7,9 +7,9 @@
 from timeit import default_timer
 from csv import DictWriter
 
-from django.contrib.auth.models import Group
+from django.contrib.auth.models import Group, User
 from django.contrib.syndication.views import Feed
-from django.http import(
+from django.http import (
     HttpRequest,
     HttpResponse,
     HttpResponseRedirect,
@@ -369,3 +369,27 @@ class OrderExportView(UserPassesTestMixin, View):
             for order in orders
         ]
         return JsonResponse({"orders": orders_data})
+
+
+class UserOrdersListView(ListView):
+    template_name = "shopapp/user_orders.html"
+    queryset = Order.objects.all()
+
+    def get_queryset(self):
+        self.owner = User.objects.get(pk=self.kwargs["user_id"])
+        return Order.objects.filter(user=self.owner)
+
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['owner'] = self.owner
+        return context
+
+
+class UserOrderDetailView(PermissionRequiredMixin, DetailView):
+    template_name = "shopapp/user_order_details.html"
+    permission_required = "shopapp.view_order"
+    queryset = (
+        Order.objects
+        .select_related("user")
+        .prefetch_related("products")
+    )
