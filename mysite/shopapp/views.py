@@ -15,7 +15,7 @@ from django.http import (
     HttpResponseRedirect,
     JsonResponse
 )
-from django.shortcuts import render, redirect, reverse
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.core.cache import cache
 from django.urls import reverse_lazy
 from django.utils.decorators import method_decorator
@@ -371,9 +371,14 @@ class OrderExportView(UserPassesTestMixin, View):
         return JsonResponse({"orders": orders_data})
 
 
-class UserOrdersListView(ListView):
+class UserOrdersListView(LoginRequiredMixin, ListView):
     template_name = "shopapp/user_orders.html"
     queryset = Order.objects.all()
+
+    def dispatch(self, request, *args, **kwargs):
+        user_id = self.kwargs.get("user_id")
+        self.owner = get_object_or_404(User, id=user_id)
+        return super().dispatch(request, *args, **kwargs)
 
     def get_queryset(self):
         self.owner = User.objects.get(pk=self.kwargs["user_id"])
