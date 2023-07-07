@@ -398,3 +398,21 @@ class UserOrderDetailView(PermissionRequiredMixin, DetailView):
         .select_related("user")
         .prefetch_related("products")
     )
+
+
+class UserOrderExportView(View):
+
+    def get(self, request, user_id):
+        user = get_object_or_404(User, id=user_id)
+        orders = Order.objects.order_by("pk").all()
+        orders_data = [
+            {
+                "order_id": order.pk,
+                "delivery_address": order.delivery_address,
+                "promocode": order.promocode,
+                "user_id": order.user.pk,
+                "products": [product.pk for product in order.products.all()]
+            }
+            for order in orders
+        ]
+        return JsonResponse({"orders": orders_data})
