@@ -1658,3 +1658,948 @@ ValueError: The view shopapp.admin.method.__call__ didn't return an HttpResponse
 2023-06-30 17:51:12,092 [INFO] django.utils.autoreload Watching for file changes with StatReloader
 2023-06-30 17:53:33,859 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/admin.py changed, reloading.
 2023-06-30 17:53:34,375 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-03 17:39:13,345 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-03 17:39:36,301 [WARNING] django.request Not Found: /favicon.ico
+2023-07-03 17:39:44,549 [INFO] shopapp.views Rendering shop index
+2023-07-03 17:43:25,142 [INFO] shopapp.views Rendering shop index
+2023-07-03 17:44:53,705 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/mysite/settings.py changed, reloading.
+2023-07-03 17:44:54,382 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-03 17:47:00,557 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/myauth/views.py changed, reloading.
+2023-07-03 17:47:01,822 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-03 17:47:44,158 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/myauth/views.py changed, reloading.
+2023-07-03 17:47:45,113 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-03 17:48:30,680 [WARNING] django.request Not Found: /myauth/cookie/get/
+2023-07-03 17:49:05,455 [WARNING] django.request Not Found: /account/cookie/get/
+2023-07-03 17:52:31,841 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/myauth/views.py changed, reloading.
+2023-07-03 17:52:32,359 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-03 17:52:52,432 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/myauth/views.py changed, reloading.
+2023-07-03 17:52:52,972 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-03 17:53:03,827 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/myauth/views.py changed, reloading.
+2023-07-03 17:53:04,398 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-03 17:53:15,407 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/myauth/views.py changed, reloading.
+2023-07-03 17:53:15,953 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-03 17:53:25,722 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/myauth/views.py changed, reloading.
+2023-07-03 17:53:26,261 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-03 17:53:32,968 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/myauth/views.py changed, reloading.
+2023-07-03 17:53:33,787 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-03 17:53:51,105 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/myauth/views.py changed, reloading.
+2023-07-03 17:53:52,435 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-03 17:54:16,074 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/myauth/views.py changed, reloading.
+2023-07-03 17:54:16,815 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-03 17:54:23,709 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/myauth/views.py changed, reloading.
+2023-07-03 17:54:25,798 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-03 17:57:30,182 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/urls.py changed, reloading.
+2023-07-03 17:57:31,194 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-03 17:58:25,780 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/urls.py changed, reloading.
+2023-07-03 17:58:26,738 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-03 17:59:29,874 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/urls.py changed, reloading.
+2023-07-03 17:59:31,193 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-03 17:59:54,159 [INFO] shopapp.views Запрошена страница со списком товаров
+2023-07-03 17:59:54,529 [WARNING] django.request Not Found: /media/products/product_3/preview/Без_названия_1_H1fRbmK.jpeg
+2023-07-03 18:00:04,815 [INFO] shopapp.views Rendering shop index
+2023-07-03 18:05:24,388 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-03 18:05:25,062 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-03 18:05:32,749 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-03 18:05:33,216 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-03 18:05:58,570 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-03 18:05:59,027 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-03 18:06:08,771 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-03 18:06:09,405 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-03 18:06:29,858 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-03 18:06:30,821 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-03 18:06:51,431 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-03 18:06:51,884 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-03 18:07:10,969 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-03 18:07:11,626 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-03 18:07:43,918 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-03 18:07:44,359 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-03 18:08:04,590 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-03 18:08:05,243 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-03 18:08:37,139 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-03 18:08:37,847 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-03 18:10:25,063 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-03 18:10:26,092 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-03 18:10:42,384 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-03 18:10:43,064 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-03 18:11:55,854 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-03 18:11:56,591 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-03 18:12:43,289 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-03 18:12:43,791 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-03 18:13:08,679 [INFO] shopapp.views Rendering shop index
+2023-07-03 18:14:59,294 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-03 18:15:00,003 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-03 18:15:56,046 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/urls.py changed, reloading.
+2023-07-03 18:15:56,609 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-03 18:17:01,797 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-03 18:17:02,313 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-03 18:17:22,506 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-03 18:17:23,125 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-03 18:17:48,867 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/urls.py changed, reloading.
+2023-07-03 18:17:49,456 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-03 18:17:51,262 [INFO] shopapp.views Rendering shop index
+2023-07-03 18:24:01,801 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-03 18:24:02,408 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-03 18:27:10,161 [INFO] shopapp.views Rendering shop index
+2023-07-03 18:27:11,319 [INFO] shopapp.views Rendering shop index
+2023-07-03 18:27:12,268 [INFO] shopapp.views Rendering shop index
+2023-07-03 18:28:09,514 [INFO] shopapp.views Rendering shop index
+2023-07-03 18:28:14,284 [INFO] shopapp.views Rendering shop index
+2023-07-03 18:28:16,137 [INFO] shopapp.views Rendering shop index
+2023-07-03 18:28:17,234 [INFO] shopapp.views Rendering shop index
+2023-07-03 18:29:59,468 [INFO] shopapp.views Rendering shop index
+2023-07-03 18:30:01,124 [INFO] shopapp.views Rendering shop index
+2023-07-03 18:30:12,588 [INFO] shopapp.views Rendering shop index
+2023-07-03 18:30:16,844 [INFO] shopapp.views Rendering shop index
+2023-07-03 18:30:18,192 [INFO] shopapp.views Rendering shop index
+2023-07-03 18:31:02,055 [INFO] shopapp.views Rendering shop index
+2023-07-03 18:31:03,461 [INFO] shopapp.views Rendering shop index
+2023-07-03 18:31:05,897 [INFO] shopapp.views Rendering shop index
+2023-07-03 18:31:07,099 [INFO] shopapp.views Rendering shop index
+2023-07-03 18:31:13,355 [INFO] shopapp.views Rendering shop index
+2023-07-03 18:31:15,169 [INFO] shopapp.views Rendering shop index
+2023-07-03 18:31:16,408 [INFO] shopapp.views Rendering shop index
+2023-07-03 18:31:17,702 [INFO] shopapp.views Rendering shop index
+2023-07-03 18:31:18,593 [INFO] shopapp.views Rendering shop index
+2023-07-03 18:31:20,189 [INFO] shopapp.views Rendering shop index
+2023-07-03 18:31:21,231 [INFO] shopapp.views Rendering shop index
+2023-07-03 18:31:36,449 [INFO] shopapp.views Rendering shop index
+2023-07-03 18:31:38,339 [INFO] shopapp.views Rendering shop index
+2023-07-03 18:31:39,823 [INFO] shopapp.views Rendering shop index
+2023-07-03 18:39:04,460 [INFO] shopapp.views Rendering shop index
+2023-07-03 18:39:09,074 [INFO] shopapp.views Rendering shop index
+2023-07-03 18:46:36,228 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-03 18:46:36,849 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-03 18:48:03,567 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-03 18:48:04,008 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-03 18:48:24,064 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-03 18:48:24,523 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-03 18:48:32,161 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-03 18:48:32,604 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-03 18:49:00,033 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-03 18:49:00,521 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-03 18:49:13,469 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-03 18:49:14,139 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-03 18:50:20,180 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-03 18:50:21,016 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-03 18:50:56,325 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-03 18:50:56,840 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-03 18:51:16,198 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-03 18:51:16,823 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-03 18:51:35,341 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-03 18:51:36,010 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-03 18:52:15,434 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-03 18:52:15,857 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-03 18:52:48,753 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-03 18:52:49,273 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-03 18:53:18,295 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-03 18:53:18,721 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-03 18:57:12,195 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/mysite/settings.py changed, reloading.
+2023-07-03 18:57:12,796 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-03 18:57:31,809 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/mysite/settings.py changed, reloading.
+2023-07-03 20:05:27,156 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-03 20:05:43,884 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-03 20:06:22,250 [INFO] shopapp.views Rendering shop index
+2023-07-03 20:21:10,954 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-03 20:23:37,995 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-03 20:23:38,685 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-03 21:18:59,365 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-03 21:19:19,984 [INFO] shopapp.views Запрошена страница со списком заказов
+2023-07-03 21:20:02,495 [WARNING] django.request Not Found: /ru/shop/users/1
+2023-07-03 21:21:16,099 [ERROR] django.request Internal Server Error: /ru/shop/users/1/orders/
+Traceback (most recent call last):
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/views.py", line 84, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 96, in view
+    self = cls(**initkwargs)
+  File "/home/nata/PycharmProjects/python_django/mysite/shopapp/views.py", line 379, in __init__
+    super().__init__(kwargs)
+TypeError: View.__init__() takes 1 positional argument but 2 were given
+2023-07-03 21:22:06,960 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-03 21:22:08,075 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-03 21:22:10,202 [ERROR] django.request Internal Server Error: /ru/shop/users/1/orders/
+Traceback (most recent call last):
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 505, in parse
+    compile_func = self.tags[command]
+KeyError: 'translate'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/views.py", line 38, in sentry_patched_render
+    return old_render(self)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/templates.py", line 74, in rendered_content
+    return real_rendered_content.fget(self)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/backends/django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 232, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 558, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 32: 'translate', expected 'endblock'. Did you forget to register or load this tag?
+2023-07-03 21:24:16,707 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-03 21:24:17,508 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-03 21:24:36,673 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-03 21:24:37,311 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-03 21:25:12,834 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-03 21:25:13,426 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-03 21:25:38,840 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-03 21:25:39,519 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-03 21:26:45,026 [ERROR] django.request Internal Server Error: /ru/shop/users/2/orders/
+Traceback (most recent call last):
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/views.py", line 84, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/list.py", line 154, in get
+    self.object_list = self.get_queryset()
+  File "/home/nata/PycharmProjects/python_django/mysite/shopapp/views.py", line 379, in get_queryset
+    self.owner = User.object.get(pk=self.kwargs["user_id"])
+AttributeError: type object 'User' has no attribute 'object'
+2023-07-03 21:28:02,278 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-03 21:28:03,030 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-03 21:28:24,743 [INFO] shopapp.views Запрошена страница со списком заказов
+2023-07-03 21:39:06,665 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/urls.py changed, reloading.
+2023-07-03 21:39:07,396 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-03 21:39:18,837 [ERROR] django.request Internal Server Error: /ru/shop/users/1/orders/
+Traceback (most recent call last):
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/views.py", line 38, in sentry_patched_render
+    return old_render(self)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/templates.py", line 74, in rendered_content
+    return real_rendered_content.fget(self)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/defaulttags.py", line 321, in render
+    return nodelist.render(context)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'user_order_details' with keyword arguments '{'pk': 1}' not found. 1 pattern(s) tried: ['ru/shop/user/orders/(?P<user_id>[0-9]+)/\\Z']
+2023-07-03 21:40:26,730 [ERROR] django.request Internal Server Error: /ru/shop/users/1/orders/
+Traceback (most recent call last):
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/views.py", line 38, in sentry_patched_render
+    return old_render(self)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/templates.py", line 74, in rendered_content
+    return real_rendered_content.fget(self)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/defaulttags.py", line 321, in render
+    return nodelist.render(context)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'user_order_details' with keyword arguments '{'pk': 1}' not found. 1 pattern(s) tried: ['ru/shop/user/orders/(?P<user_id>[0-9]+)/\\Z']
+2023-07-03 21:41:28,386 [ERROR] django.request Internal Server Error: /ru/shop/users/1/orders/
+Traceback (most recent call last):
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/views.py", line 38, in sentry_patched_render
+    return old_render(self)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/templates.py", line 74, in rendered_content
+    return real_rendered_content.fget(self)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/defaulttags.py", line 321, in render
+    return nodelist.render(context)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'user_order_details' with keyword arguments '{'pk': 1}' not found. 1 pattern(s) tried: ['ru/shop/user/orders/(?P<user_id>[0-9]+)/\\Z']
+2023-07-03 21:42:29,736 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/urls.py changed, reloading.
+2023-07-03 21:42:30,455 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-03 21:42:40,405 [INFO] shopapp.views Запрошена страница со списком заказов
+2023-07-03 21:45:14,435 [INFO] shopapp.views Запрошена страница со списком заказов
+2023-07-03 21:50:13,752 [INFO] shopapp.views Запрошена страница со списком заказов
+2023-07-03 21:58:51,020 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-03 21:58:51,708 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-03 21:58:55,417 [ERROR] django.request Internal Server Error: /ru/shop/user/orders/1/
+Traceback (most recent call last):
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/views.py", line 38, in sentry_patched_render
+    return old_render(self)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/templates.py", line 74, in rendered_content
+    return real_rendered_content.fget(self)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'user_orders' with keyword arguments '{'pk': ''}' not found. 1 pattern(s) tried: ['ru/shop/users/(?P<user_id>[0-9]+)/orders/\\Z']
+2023-07-03 21:59:18,639 [ERROR] django.request Internal Server Error: /ru/shop/user/orders/1/
+Traceback (most recent call last):
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/views.py", line 38, in sentry_patched_render
+    return old_render(self)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/templates.py", line 74, in rendered_content
+    return real_rendered_content.fget(self)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'user_orders' with keyword arguments '{'pk': ''}' not found. 1 pattern(s) tried: ['ru/shop/users/(?P<user_id>[0-9]+)/orders/\\Z']
+2023-07-03 22:00:42,841 [ERROR] django.request Internal Server Error: /ru/shop/user/orders/1/
+Traceback (most recent call last):
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/views.py", line 38, in sentry_patched_render
+    return old_render(self)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/templates.py", line 74, in rendered_content
+    return real_rendered_content.fget(self)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'user_orders' with keyword arguments '{'user_id': ''}' not found. 1 pattern(s) tried: ['ru/shop/users/(?P<user_id>[0-9]+)/orders/\\Z']
+2023-07-03 22:00:45,994 [ERROR] django.request Internal Server Error: /ru/shop/user/orders/1/
+Traceback (most recent call last):
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/views.py", line 38, in sentry_patched_render
+    return old_render(self)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/templates.py", line 74, in rendered_content
+    return real_rendered_content.fget(self)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'user_orders' with keyword arguments '{'user_id': ''}' not found. 1 pattern(s) tried: ['ru/shop/users/(?P<user_id>[0-9]+)/orders/\\Z']
+2023-07-03 22:02:32,262 [ERROR] django.request Internal Server Error: /ru/shop/user/orders/1/
+Traceback (most recent call last):
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/views.py", line 38, in sentry_patched_render
+    return old_render(self)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/templates.py", line 74, in rendered_content
+    return real_rendered_content.fget(self)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/template/defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'user_orders' with no arguments not found. 1 pattern(s) tried: ['ru/shop/users/(?P<user_id>[0-9]+)/orders/\\Z']
+2023-07-07 17:36:25,205 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-07 17:36:27,785 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-07 17:37:16,169 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-07 17:37:16,758 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-07 17:37:49,272 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-07 17:37:49,708 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-07 17:38:07,968 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-07 17:38:08,401 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-07 17:38:20,089 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-07 17:38:20,526 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-07 17:38:45,791 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-07 17:38:46,229 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-07 17:39:06,483 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-07 17:39:06,981 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-07 17:39:35,694 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-07 17:39:36,340 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-07 17:39:45,176 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-07 17:39:45,658 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-07 17:40:14,221 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-07 17:40:14,676 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-07 17:40:39,964 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-07 17:40:40,397 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-07 17:40:50,093 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-07 17:40:50,537 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-07 17:41:00,286 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-07 17:41:00,757 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-07 17:41:41,549 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-07 17:41:41,993 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-07 17:43:02,177 [WARNING] django.request Not Found: /ru/shop/users/11/orders/
+2023-07-07 18:18:53,304 [INFO] shopapp.views Rendering shop index
+2023-07-07 18:19:00,071 [INFO] shopapp.views Rendering shop index
+2023-07-07 18:19:13,348 [INFO] shopapp.views Rendering shop index
+2023-07-07 18:19:14,419 [INFO] shopapp.views Rendering shop index
+2023-07-07 18:19:16,672 [INFO] shopapp.views Rendering shop index
+2023-07-07 18:19:18,401 [INFO] shopapp.views Rendering shop index
+2023-07-07 18:24:43,167 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-07 18:24:43,709 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-07 18:25:19,600 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-07 18:25:20,042 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-07 18:27:12,599 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-07 18:27:13,086 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-07 18:28:02,889 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/urls.py changed, reloading.
+2023-07-07 18:28:03,486 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-07 18:29:28,758 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/urls.py changed, reloading.
+2023-07-07 18:29:29,209 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-07 18:31:12,532 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-07 18:31:13,118 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-07 18:32:30,894 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-07 18:32:31,481 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-07 18:32:46,908 [ERROR] django.request Internal Server Error: /ru/shop/users/2/orders/export/
+Traceback (most recent call last):
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/views.py", line 84, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/nata/PycharmProjects/python_django/mysite/shopapp/views.py", line 408, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+TypeError: UserOrderExportView.get() got an unexpected keyword argument 'user_id'
+2023-07-07 18:36:00,692 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-07 18:36:21,071 [ERROR] django.request Internal Server Error: /ru/shop/users/2/orders/export/
+Traceback (most recent call last):
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/views.py", line 84, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/nata/PycharmProjects/python_django/mysite/shopapp/views.py", line 409, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+TypeError: UserOrderExportView.get() got an unexpected keyword argument 'user_id'
+2023-07-07 18:39:05,226 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-07 18:39:05,884 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-07 18:39:32,618 [ERROR] django.request Internal Server Error: /ru/shop/users/2/orders/export/
+Traceback (most recent call last):
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/views.py", line 84, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+TypeError: UserOrderExportView.get() got an unexpected keyword argument 'user_id'
+2023-07-07 18:41:46,816 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-07 18:41:47,447 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-07 18:42:15,861 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-07 18:42:16,470 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-07 18:46:04,059 [WARNING] django.request Not Found: /ru/shop/users/12/orders/export/
+2023-07-08 15:38:58,555 [WARNING] django.request Not Found: /ru/shop/users/18/orders/export/
+2023-07-08 15:45:36,757 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-08 15:45:37,252 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-08 15:47:55,978 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-08 15:47:56,504 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-08 15:49:41,135 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-08 15:49:41,629 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-08 15:51:25,964 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-08 15:51:26,536 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-08 15:51:37,395 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-08 15:51:37,827 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-08 15:52:03,446 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-08 15:52:03,870 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-08 15:52:21,964 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-08 15:52:22,469 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-08 15:52:39,485 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-08 15:52:39,916 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-08 15:52:54,819 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-08 15:52:55,249 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-08 15:53:11,268 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-08 15:53:11,717 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-08 15:53:31,989 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-08 15:53:32,435 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-08 15:53:53,580 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-08 15:53:54,015 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-08 15:54:26,783 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-08 15:54:27,220 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-08 15:54:34,861 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-08 15:54:35,361 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-08 15:55:08,198 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-08 15:55:08,716 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-08 15:57:03,249 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-08 15:57:03,818 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-08 15:58:00,507 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-08 15:58:00,936 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-08 15:58:32,618 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-08 15:58:33,160 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-08 15:58:41,885 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-08 15:58:42,360 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-08 15:58:59,345 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-08 15:58:59,776 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-08 15:59:21,047 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-08 15:59:21,473 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-08 16:00:25,462 [ERROR] django.request Internal Server Error: /ru/shop/users/2/orders/export/
+Traceback (most recent call last):
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/views.py", line 84, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/nata/PycharmProjects/python_django/mysite/shopapp/views.py", line 414, in get
+    user_orders_data = [
+  File "/home/nata/PycharmProjects/python_django/mysite/shopapp/views.py", line 420, in <listcomp>
+    "products": [product.pk for product in user_orders.products.all()]
+AttributeError: 'QuerySet' object has no attribute 'products'
+2023-07-08 16:02:02,999 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-08 16:02:03,459 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-08 16:02:09,994 [ERROR] django.request Internal Server Error: /ru/shop/users/1/orders/export/
+Traceback (most recent call last):
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/views.py", line 84, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/nata/PycharmProjects/python_django/mysite/shopapp/views.py", line 415, in get
+    user_orders_data = [
+  File "/home/nata/PycharmProjects/python_django/mysite/shopapp/views.py", line 421, in <listcomp>
+    "products": [product.pk for product in user_orders.products.all()]
+AttributeError: 'QuerySet' object has no attribute 'products'
+2023-07-08 16:03:44,698 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-08 16:03:45,188 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-08 16:03:45,722 [ERROR] django.request Internal Server Error: /ru/shop/users/1/orders/export/
+Traceback (most recent call last):
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/views.py", line 84, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/nata/PycharmProjects/python_django/mysite/shopapp/views.py", line 414, in get
+    user_orders_data = [
+  File "/home/nata/PycharmProjects/python_django/mysite/shopapp/views.py", line 420, in <listcomp>
+    "products": [product.pk for product in user_orders.products.all()]
+AttributeError: 'QuerySet' object has no attribute 'products'
+2023-07-08 16:07:41,202 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-08 16:07:42,030 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-08 16:10:04,761 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-08 16:10:05,468 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-08 16:10:07,910 [ERROR] django.request Internal Server Error: /ru/shop/users/1/orders/export/
+Traceback (most recent call last):
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/views.py", line 84, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+TypeError: UserOrdersExportView.get() got an unexpected keyword argument 'user_id'
+2023-07-08 16:15:14,604 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-08 16:15:15,073 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-08 16:15:27,988 [ERROR] django.request Internal Server Error: /ru/shop/users/1/orders/export/
+Traceback (most recent call last):
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/views.py", line 84, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/nata/PycharmProjects/python_django/mysite/shopapp/views.py", line 413, in get
+    user_orders_data = [
+  File "/home/nata/PycharmProjects/python_django/mysite/shopapp/views.py", line 419, in <listcomp>
+    "products": [product.pk for product in user_orders.products.all()]
+AttributeError: 'QuerySet' object has no attribute 'products'
+2023-07-08 16:30:18,222 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-08 16:30:18,784 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-08 16:44:33,491 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-08 16:44:34,011 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-08 16:44:51,130 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-08 16:44:51,579 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-08 16:45:31,498 [WARNING] django.request Not Found: /ru/shop/users/9/orders/export/
+2023-07-08 16:59:32,158 [WARNING] django.request Not Found: /ru/shop/users/9/orders/
+2023-07-08 16:59:57,421 [INFO] myauth.views Пользователь admin вышел из системы
+2023-07-08 17:00:11,575 [INFO] myauth.views Пользователь admin успешно аутентифицирован
+2023-07-08 17:00:27,617 [INFO] myauth.views Пользователь admin вышел из системы
+2023-07-08 17:00:40,318 [WARNING] myauth.views Неудачная попытка аутентификации пользователя admin22
