@@ -400,19 +400,25 @@ class UserOrderDetailView(PermissionRequiredMixin, DetailView):
     )
 
 
-class UserOrderExportView(View):
+class UserOrdersExportView(View):
 
-    def get(self, request, user_id):
+    def get(self, request: HttpRequest, user_id: int) -> JsonResponse:
         user = get_object_or_404(User, id=user_id)
-        orders = Order.objects.order_by("pk").all()
-        orders_data = [
-            {
-                "order_id": order.pk,
-                "delivery_address": order.delivery_address,
-                "promocode": order.promocode,
-                "user_id": order.user.pk,
-                "products": [product.pk for product in order.products.all()]
-            }
-            for order in orders
-        ]
-        return JsonResponse({"orders": orders_data})
+        cache_key = f'user_orders_{user_id}'
+        cache_data = cache.get(cache_key)
+        if cache_data:
+            return JsonResponse(cache_data)
+        else:
+            user_orders = Order.objects.filter(user=user).order_by("pk")
+            user_orders_data = [
+                {
+                    "order_id": user_order.pk,
+                    "delivery_address": user_order.delivery_address,
+                    "promocode": user_order.promocode,
+                    "user_id": user_id,
+                    "products": [product.pk for product in user_order.products.all()]
+                }
+                for user_order in user_orders
+            ]
+            cache.set(cache_key, user_orders_data, 100)
+            return JsonResponse({"orders": user_orders_data})

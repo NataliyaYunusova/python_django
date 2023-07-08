@@ -2457,3 +2457,139 @@ TypeError: UserOrderExportView.get() got an unexpected keyword argument 'user_id
 2023-07-07 18:42:15,861 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
 2023-07-07 18:42:16,470 [INFO] django.utils.autoreload Watching for file changes with StatReloader
 2023-07-07 18:46:04,059 [WARNING] django.request Not Found: /ru/shop/users/12/orders/export/
+2023-07-08 15:38:58,555 [WARNING] django.request Not Found: /ru/shop/users/18/orders/export/
+2023-07-08 15:45:36,757 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-08 15:45:37,252 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-08 15:47:55,978 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-08 15:47:56,504 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-08 15:49:41,135 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-08 15:49:41,629 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-08 15:51:25,964 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-08 15:51:26,536 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-08 15:51:37,395 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-08 15:51:37,827 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-08 15:52:03,446 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-08 15:52:03,870 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-08 15:52:21,964 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-08 15:52:22,469 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-08 15:52:39,485 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-08 15:52:39,916 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-08 15:52:54,819 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-08 15:52:55,249 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-08 15:53:11,268 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-08 15:53:11,717 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-08 15:53:31,989 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-08 15:53:32,435 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-08 15:53:53,580 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-08 15:53:54,015 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-08 15:54:26,783 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-08 15:54:27,220 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-08 15:54:34,861 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-08 15:54:35,361 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-08 15:55:08,198 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-08 15:55:08,716 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-08 15:57:03,249 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-08 15:57:03,818 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-08 15:58:00,507 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-08 15:58:00,936 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-08 15:58:32,618 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-08 15:58:33,160 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-08 15:58:41,885 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-08 15:58:42,360 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-08 15:58:59,345 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-08 15:58:59,776 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-08 15:59:21,047 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-08 15:59:21,473 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-08 16:00:25,462 [ERROR] django.request Internal Server Error: /ru/shop/users/2/orders/export/
+Traceback (most recent call last):
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/views.py", line 84, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/nata/PycharmProjects/python_django/mysite/shopapp/views.py", line 414, in get
+    user_orders_data = [
+  File "/home/nata/PycharmProjects/python_django/mysite/shopapp/views.py", line 420, in <listcomp>
+    "products": [product.pk for product in user_orders.products.all()]
+AttributeError: 'QuerySet' object has no attribute 'products'
+2023-07-08 16:02:02,999 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-08 16:02:03,459 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-08 16:02:09,994 [ERROR] django.request Internal Server Error: /ru/shop/users/1/orders/export/
+Traceback (most recent call last):
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/views.py", line 84, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/nata/PycharmProjects/python_django/mysite/shopapp/views.py", line 415, in get
+    user_orders_data = [
+  File "/home/nata/PycharmProjects/python_django/mysite/shopapp/views.py", line 421, in <listcomp>
+    "products": [product.pk for product in user_orders.products.all()]
+AttributeError: 'QuerySet' object has no attribute 'products'
+2023-07-08 16:03:44,698 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-08 16:03:45,188 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-08 16:03:45,722 [ERROR] django.request Internal Server Error: /ru/shop/users/1/orders/export/
+Traceback (most recent call last):
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/views.py", line 84, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/nata/PycharmProjects/python_django/mysite/shopapp/views.py", line 414, in get
+    user_orders_data = [
+  File "/home/nata/PycharmProjects/python_django/mysite/shopapp/views.py", line 420, in <listcomp>
+    "products": [product.pk for product in user_orders.products.all()]
+AttributeError: 'QuerySet' object has no attribute 'products'
+2023-07-08 16:07:41,202 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-08 16:07:42,030 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-08 16:10:04,761 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-08 16:10:05,468 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-08 16:10:07,910 [ERROR] django.request Internal Server Error: /ru/shop/users/1/orders/export/
+Traceback (most recent call last):
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/views.py", line 84, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+TypeError: UserOrdersExportView.get() got an unexpected keyword argument 'user_id'
+2023-07-08 16:15:14,604 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-08 16:15:15,073 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-08 16:15:27,988 [ERROR] django.request Internal Server Error: /ru/shop/users/1/orders/export/
+Traceback (most recent call last):
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/views.py", line 84, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/nata/PycharmProjects/python_django/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/nata/PycharmProjects/python_django/mysite/shopapp/views.py", line 413, in get
+    user_orders_data = [
+  File "/home/nata/PycharmProjects/python_django/mysite/shopapp/views.py", line 419, in <listcomp>
+    "products": [product.pk for product in user_orders.products.all()]
+AttributeError: 'QuerySet' object has no attribute 'products'
+2023-07-08 16:30:18,222 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-08 16:30:18,784 [INFO] django.utils.autoreload Watching for file changes with StatReloader
