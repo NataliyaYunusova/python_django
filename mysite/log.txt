@@ -2593,3 +2593,13 @@ Traceback (most recent call last):
 AttributeError: 'QuerySet' object has no attribute 'products'
 2023-07-08 16:30:18,222 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
 2023-07-08 16:30:18,784 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-08 16:44:33,491 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-08 16:44:34,011 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-08 16:44:51,130 [INFO] django.utils.autoreload /home/nata/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-07-08 16:44:51,579 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-07-08 16:45:31,498 [WARNING] django.request Not Found: /ru/shop/users/9/orders/export/
+2023-07-08 16:59:32,158 [WARNING] django.request Not Found: /ru/shop/users/9/orders/
+2023-07-08 16:59:57,421 [INFO] myauth.views Пользователь admin вышел из системы
+2023-07-08 17:00:11,575 [INFO] myauth.views Пользователь admin успешно аутентифицирован
+2023-07-08 17:00:27,617 [INFO] myauth.views Пользователь admin вышел из системы
+2023-07-08 17:00:40,318 [WARNING] myauth.views Неудачная попытка аутентификации пользователя admin22

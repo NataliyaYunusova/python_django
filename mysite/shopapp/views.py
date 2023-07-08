@@ -9,6 +9,7 @@ from csv import DictWriter
 
 from django.contrib.auth.models import Group, User
 from django.contrib.syndication.views import Feed
+from django.core.serializers import serialize
 from django.http import (
     HttpRequest,
     HttpResponse,
@@ -410,15 +411,16 @@ class UserOrdersExportView(View):
             return JsonResponse(cache_data)
         else:
             user_orders = Order.objects.filter(user=user).order_by("pk")
-            user_orders_data = [
-                {
-                    "order_id": user_order.pk,
-                    "delivery_address": user_order.delivery_address,
-                    "promocode": user_order.promocode,
-                    "user_id": user_id,
-                    "products": [product.pk for product in user_order.products.all()]
-                }
-                for user_order in user_orders
-            ]
+            # user_orders_data = [
+            #     {
+            #         "order_id": user_order.pk,
+            #         "delivery_address": user_order.delivery_address,
+            #         "promocode": user_order.promocode,
+            #         "user_id": user_id,
+            #         "products": [product.pk for product in user_order.products.all()]
+            #     }
+            #     for user_order in user_orders
+            # ]
+            user_orders_data = serialize('python', user_orders)
             cache.set(cache_key, user_orders_data, 100)
             return JsonResponse({"orders": user_orders_data})
