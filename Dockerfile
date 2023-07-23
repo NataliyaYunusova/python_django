@@ -10,5 +10,6 @@ COPY pyproject.toml poetry.lock ./
 RUN poetry install
 
 COPY mysite .
+RUN python manage.py migrate
 
 CMD ["gunicorn", "mysite.wsgi:application", "--bind", "0.0.0.0:8000"]
