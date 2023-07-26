@@ -11,5 +11,9 @@ RUN poetry install
 
 COPY mysite .
 COPY mysite/shopapp/fixtures app/fixtures
+COPY mysite/database/db.sqlite3 database/
+
+RUN python manage.py makemigrations
+RUN python manage.py migrate
 
 CMD ["gunicorn", "mysite.wsgi:application", "--bind", "0.0.0.0:8000"]
