@@ -9,9 +9,9 @@ RUN poetry config virtualenvs.create false --local
 COPY pyproject.toml poetry.lock ./
 RUN poetry install
 
+COPY mysite/mysite/database/db.sqlite3 app/mysite/database/db.sqlite3
 COPY mysite .
-COPY mysite/shopapp/fixtures app/fixtures
-COPY mysite/database/db.sqlite3 database/
+COPY mysite/shopapp/fixtures app/shopapp/fixtures
 
 RUN python manage.py makemigrations
 RUN python manage.py migrate
